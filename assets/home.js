@@ -64,6 +64,7 @@ for (const slug of home.featuredProjects) {
   const card = document.createElement("article");
   const link = document.createElement("a");
   link.className = "project-panel";
+  if (project.theme) link.dataset.theme = project.theme;
   link.href = `projects/${slug}/`;
   link.textContent = project.title;
   const description = document.createElement("p");
