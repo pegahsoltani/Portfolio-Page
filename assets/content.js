@@ -6,8 +6,8 @@ export const profile = {
   introduction: "I love turning complex problems into products people love to use.",
   specialties: ["B2B SaaS", "AI Products", "Experimentation"],
   photos: {
-    city: { src: null, position: "center" },
-    portrait: { src: null, alt: "Pegah Soltani" },
+    city: { src: "assets/Sunset-Dublin-Background.jpg", position: "center" },
+    portrait: { src: "assets/Profile-Picture.JPG", alt: "Pegah Soltani overlooking Dublin" },
   },
   links: { linkedin: null, email: null, github: null },
 };
