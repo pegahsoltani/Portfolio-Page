@@ -1,4 +1,5 @@
-import { profile } from "./content.js";
+import { profile, home } from "./content.js";
+import { projects } from "./projects.js";
 
 document.title = `${profile.name} · Product Management`;
 document.querySelector("h1").textContent = `Hi, I am ${profile.name}`;
@@ -28,4 +29,50 @@ for (const [index, key] of ["linkedin", "email", "github"].entries()) {
   if (key !== "email") { link.target = "_blank"; link.rel = "noopener noreferrer"; }
   contactItems[index].replaceChildren(link);
 }
-if (Object.values(profile.links).every(Boolean)) document.querySelector(".contact-placeholder").hidden = true;
+const missingContacts = Object.entries(profile.links).filter(([, value]) => !value).map(([key]) => key === "email" ? "Email" : "GitHub");
+document.querySelector(".contact-placeholder").textContent = `${missingContacts.join(" and ")} details coming soon`;
+if (!missingContacts.length) document.querySelector(".contact-placeholder").hidden = true;
+
+for (const element of document.querySelectorAll("[data-copy]")) {
+  const copy = home[element.dataset.copy];
+  if (Array.isArray(copy)) {
+    element.replaceChildren(...copy.map(text => {
+      const paragraph = document.createElement("p");
+      paragraph.textContent = text;
+      return paragraph;
+    }));
+  } else element.textContent = copy;
+}
+
+for (const image of document.querySelectorAll("[data-photo]")) {
+  const photo = home.photos[image.dataset.photo];
+  image.alt = photo.alt;
+  image.width = photo.width;
+  image.height = photo.height;
+  image.addEventListener("error", () => {
+    const fallback = document.createElement("p");
+    fallback.className = "media-fallback";
+    fallback.textContent = `${photo.alt} — image unavailable`;
+    image.replaceWith(fallback);
+  });
+  image.src = photo.src;
+}
+
+const featured = document.querySelector("#featured-projects");
+for (const slug of home.featuredProjects) {
+  const project = projects.find(item => item.slug === slug);
+  const card = document.createElement("article");
+  const link = document.createElement("a");
+  link.className = "project-panel";
+  link.href = `projects/${slug}/`;
+  link.textContent = project.title;
+  const description = document.createElement("p");
+  description.className = "project-summary";
+  description.textContent = project.summary;
+  const details = document.createElement("a");
+  details.href = link.href;
+  details.textContent = "View project →";
+  details.setAttribute("aria-label", `View ${project.title} project`);
+  card.append(link, description, details);
+  featured.append(card);
+}

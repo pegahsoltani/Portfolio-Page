@@ -14,7 +14,7 @@
       <a class="wordmark" href="./" aria-label="Pegah Soltani, Home">PS<span>.</span></a>
       <nav aria-label="Main navigation">
         <a href="./" aria-current="page">Home</a>
-        <span aria-disabled="true" title="This section will be built in a later review">Projects</span>
+        <a href="projects/">Projects</a>
         <span aria-disabled="true" title="This section will be built in a later review">Case Studies</span>
         <span aria-disabled="true" title="This section will be built in a later review">CV</span>
       </nav>
@@ -41,6 +41,47 @@
         </div>
         <p class="city-placeholder">City photograph · awaiting upload</p>
       </section>
+      <div class="home-content">
+        <section class="about-section" aria-labelledby="about-heading">
+          <h2 id="about-heading">About Me</h2>
+          <div data-copy="about"></div>
+        </section>
+        <section class="featured-section" aria-labelledby="projects-heading">
+          <h2 id="projects-heading">Projects</h2>
+          <div class="featured-projects" id="featured-projects"></div>
+        </section>
+        <section class="dublin-section" aria-labelledby="dublin-heading">
+          <h2 id="dublin-heading">New City, New Chapter!</h2>
+          <div class="dublin-layout">
+            <div data-copy="dublin"></div>
+            <img data-photo="dublin" loading="lazy" decoding="async">
+          </div>
+        </section>
+        <section class="hobbies-section" aria-labelledby="hobbies-heading">
+          <h2 id="hobbies-heading">My Hobbies</h2>
+          <section class="hiking-section" aria-labelledby="hiking-heading">
+            <h3 id="hiking-heading">Hiking</h3>
+            <div class="hiking-layout">
+              <div class="hiking-gallery">
+                <img data-photo="hiking1" loading="lazy" decoding="async">
+                <img data-photo="hiking2" loading="lazy" decoding="async">
+                <img data-photo="hiking3" loading="lazy" decoding="async">
+              </div>
+              <p data-copy="hiking"></p>
+            </div>
+          </section>
+          <section class="dancing-section" aria-labelledby="dancing-heading">
+            <div class="dancing-copy">
+              <h3 id="dancing-heading">Dancing</h3>
+              <p data-copy="dancing"></p>
+            </div>
+            <div class="dancing-gallery">
+              <img data-photo="dancing2" loading="lazy" decoding="async">
+              <img data-photo="dancing1" loading="lazy" decoding="async">
+            </div>
+          </section>
+        </section>
+      </div>
     </main>
   </body>
 </html>
