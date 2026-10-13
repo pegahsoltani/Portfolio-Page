@@ -2,10 +2,22 @@ import { profile, home } from "./content.js";
 import { projects } from "./projects.js";
 
 document.title = `${profile.name} · Product Management`;
-document.querySelector("h1").textContent = `Hi, I am ${profile.name}`;
-document.querySelector(".hero-title").textContent = `${profile.title} | ${profile.specialties.join(" · ")}`;
-document.querySelector(".hero-location").textContent = profile.location;
-document.querySelector("#intro-title").textContent = profile.introduction;
+const hero = document.querySelector("#home-hero");
+hero.querySelector(".hero-greeting").textContent = profile.greeting;
+hero.querySelector("h1").textContent = profile.headline;
+hero.querySelector(".hero-title").textContent = profile.title;
+hero.querySelector(".hero-location").textContent = profile.location;
+hero.querySelector(".hero-introduction").replaceChildren(...profile.introduction.map(text => {
+  const paragraph = document.createElement("p");
+  paragraph.textContent = text;
+  return paragraph;
+}));
+const primaryCta = hero.querySelector(".hero-cta-primary");
+primaryCta.textContent = profile.primaryCta.label;
+primaryCta.href = profile.primaryCta.href;
+const secondaryCta = hero.querySelector(".hero-cta-secondary");
+secondaryCta.textContent = profile.secondaryCta.label;
+secondaryCta.href = `mailto:${profile.links.email}`;
 
 for (const [slot, config] of Object.entries(profile.photos)) {
   if (!config.src) continue;

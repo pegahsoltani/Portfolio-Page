@@ -1,0 +1,83 @@
+/* Approved V1: these styles apply only to the Home hero. */
+#home-hero {
+  min-height: 0;
+  grid-template-columns: minmax(0, 1fr) minmax(230px, 310px);
+  align-items: center;
+  gap: 40px;
+  padding: 40px 5%;
+  box-shadow: 0 4px 16px rgb(20 28 44 / 9%);
+}
+#home-hero .hero-shade {
+  background: linear-gradient(90deg, rgb(0 0 0 / 82%), rgb(0 0 0 / 55%));
+}
+#home-hero .hero-copy { padding: 0; }
+#home-hero .hero-greeting {
+  margin: 0 0 12px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #f3d7bd;
+}
+#home-hero h1 {
+  max-width: 24ch;
+  margin: 0 0 20px;
+  font-size: clamp(34px, 3.6vw, 52px);
+  font-weight: 650;
+  line-height: 1.12;
+  letter-spacing: -.025em;
+  color: #fff;
+}
+#home-hero .hero-introduction { max-width: 62ch; }
+#home-hero .hero-introduction p {
+  margin: 0 0 12px;
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #f5f5f5;
+}
+#home-hero .hero-introduction p:last-child { margin-bottom: 0; }
+#home-hero .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+#home-hero .hero-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 20px;
+  border: 1px solid #e9e6e1;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background .18s ease;
+}
+#home-hero .hero-cta-primary { background: #f8f4ef; color: #20232a; }
+#home-hero .hero-cta-primary:hover { background: #e8ddd0; }
+#home-hero .hero-cta-secondary { background: rgb(0 0 0 / 16%); color: #fff; }
+#home-hero .hero-cta-secondary:hover { background: rgb(255 255 255 / 12%); }
+#home-hero a:focus-visible { outline: 3px solid #f3d7bd; outline-offset: 4px; }
+#home-hero .hero-metadata {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 20px;
+  margin-top: 20px;
+}
+#home-hero .hero-metadata p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #e5e5e5;
+}
+#home-hero .portrait-photo { box-shadow: 0 3px 12px rgb(0 0 0 / 12%); }
+@media (max-width: 700px) {
+  #home-hero { grid-template-columns: minmax(0, 1fr); gap: 28px; padding: 30px 8%; }
+  #home-hero .hero-greeting { font-size: 17px; }
+  #home-hero h1 { font-size: clamp(32px, 6.5vw, 42px); }
+  #home-hero .hero-introduction p { font-size: 17px; }
+  #home-hero .hero-actions a { flex: 1 1 150px; }
+}
+@media (prefers-reduced-motion: reduce) { #home-hero .hero-actions a { transition: none; } }

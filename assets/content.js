@@ -2,8 +2,15 @@
 export const profile = {
   name: "Pegah Soltani",
   title: "Technical Product Manager",
-  location: "Dublin",
-  introduction: "I love turning complex problems into products people love to use.",
+  location: "Dublin, Ireland",
+  greeting: "Hi, I'm Pegah! 👋",
+  headline: "Curious by nature. Product Manager by profession.",
+  introduction: [
+    "I love asking questions, untangling complex problems, and working with people to turn ideas into products that make a difference.",
+    "With a background in Computer Engineering and 5+ years in product management, I bring technical thinking, creativity, and a human perspective to the products I help build.",
+  ],
+  primaryCta: { label: "Explore My Work", href: "projects/" },
+  secondaryCta: { label: "Get in Touch" },
   specialties: ["B2B SaaS", "AI Products", "Experimentation"],
   photos: {
     city: { src: "assets/Sunset-Dublin-Background.jpg", position: "center" },
