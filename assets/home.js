@@ -1,5 +1,6 @@
 import { profile, home } from "./content.js";
 import { projects } from "./projects.js";
+import { renderFeaturedProjects } from "./featured-previews.js";
 
 document.title = `${profile.name} · Product Management`;
 const hero = document.querySelector("#home-hero");
@@ -71,21 +72,4 @@ for (const image of document.querySelectorAll("[data-photo]")) {
 }
 
 const featured = document.querySelector("#featured-projects");
-for (const slug of home.featuredProjects) {
-  const project = projects.find(item => item.slug === slug);
-  const card = document.createElement("article");
-  const link = document.createElement("a");
-  link.className = "project-panel";
-  if (project.theme) link.dataset.theme = project.theme;
-  link.href = `projects/${slug}/`;
-  link.textContent = project.title;
-  const description = document.createElement("p");
-  description.className = "project-summary";
-  description.textContent = project.summary;
-  const details = document.createElement("a");
-  details.href = link.href;
-  details.textContent = "View project →";
-  details.setAttribute("aria-label", `View ${project.title} project`);
-  card.append(link, description, details);
-  featured.append(card);
-}
+renderFeaturedProjects(featured, home.featuredProjects, projects);
