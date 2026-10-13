@@ -1,7 +1,7 @@
 .case-study { max-width: 1440px; --case-color: var(--cpp-purple); --case-link: var(--color-slate); }
 .pacing-case-study .case-study { --case-color: var(--pacing-teal); --case-link: var(--color-slate); }
 .case-return { display: flex; flex-wrap: wrap; gap: 24px; padding: 18px 6% 28px; font-size: 15px; }
-.case-hero { margin: 0 3%; background: var(--color-ivory); color: var(--color-midnight); border-radius: 14px; box-shadow: 0 20px 48px -30px rgb(var(--color-midnight-rgb) / 55%); }
+.case-hero { margin: 0 3%; background: var(--color-ivory); color: var(--color-midnight); border-radius: 14px; box-shadow: 0 20px 48px -30px rgb(var(--shadow-rgb) / 55%); }
 .case-hero-inner { max-width: 1040px; margin: auto; padding: 72px 6% 64px; }
 .case-eyebrow { margin: 0 0 24px; text-transform: uppercase; letter-spacing: .16em; font-weight: 500; font-size: 15px; }
 .case-hero h1 { max-width: 920px; font-size: clamp(40px, 6.2vw, 88px); font-weight: 750; line-height: 1.06; letter-spacing: -.035em; margin: 0 0 36px; }
