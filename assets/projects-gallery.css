@@ -5,11 +5,11 @@
 .gallery-header h1 { color: var(--gallery-heading); font-size: clamp(32px, 3.4vw, 46px); font-weight: 600; margin-bottom: 18px; }
 .gallery-header .gallery-intro { color: var(--gallery-body); font-size: 19px; line-height: 1.7; margin: 0; }
 .gallery-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
-.gallery-card { --gallery-accent: var(--color-silver); --gallery-ink: var(--color-slate); min-width: 0; display: flex; flex-direction: column; overflow: hidden; background: var(--color-white); border: 1px solid var(--color-silver); border-radius: 14px; }
-.gallery-card[data-project="pacing-monitor"] { --gallery-accent: var(--color-silver); --gallery-ink: var(--color-slate); }
-.gallery-card[data-project="kiddiedesk"] { --gallery-accent: var(--color-silver); --gallery-ink: var(--color-slate); }
-.gallery-media { display: grid; align-content: center; padding: 20px; min-width: 0; background: var(--color-cloud); text-decoration: none; }
-.gallery-screenshot { width: 100%; height: auto; display: block; object-fit: contain; border-radius: 6px; }
+.gallery-card { --gallery-accent: var(--color-silver); --gallery-ink: var(--color-slate); --screenshot-aspect: 1092 / 446; min-width: 0; display: flex; flex-direction: column; overflow: hidden; background: var(--color-white); border: 1px solid var(--color-silver); border-radius: 14px; }
+.gallery-card[data-project="pacing-monitor"] { --gallery-accent: var(--color-silver); --gallery-ink: var(--color-slate); --screenshot-aspect: auto; --screenshot-height: 170px; }
+.gallery-card[data-project="kiddiedesk"] { --gallery-accent: var(--color-silver); --gallery-ink: var(--color-slate); --screenshot-aspect: auto; --screenshot-height: 170px; }
+.gallery-media { display: grid; align-content: center; padding: 20px; min-width: 0; background: var(--color-cloud); opacity: 1; filter: none; text-decoration: none; }
+.gallery-screenshot { width: 100%; height: var(--screenshot-height, auto); aspect-ratio: var(--screenshot-aspect); display: block; margin-inline: auto; object-fit: contain; object-position: center; opacity: 1; filter: none; border-radius: 6px; }
 .gallery-placeholder { display: grid; align-content: center; gap: 10px; min-height: 170px; padding: 24px; text-align: center; color: var(--gallery-body); }
 .gallery-placeholder strong { color: var(--gallery-ink); font-size: 21px; font-weight: 550; }
 .gallery-placeholder span { font-size: 14px; line-height: 1.6; }

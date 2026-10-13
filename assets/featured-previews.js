@@ -9,7 +9,8 @@ const previews = {
     outcome: "15–20% higher observed tap-through rates (TTR)",
     context: "Two enterprise customers completed experiments, applied the results to their creative decisions, and subsequently observed higher TTR compared with previous seasonal periods. This is an observational comparison, not a controlled estimate of the feature's causal impact.",
     tags: ["Product Discovery", "Experimentation", "Beta to Public Release"],
-    image: { src: "assets/cpp-ab-testing/testing-dashboard.jpg", alt: "Released CPP A/B Testing dashboard from MobileAction’s public Help Center", width: 1340, height: 717 },
+    image: { src: "assets/a-b-testing-tools.jpg", alt: "CPP A/B Testing project visual", width: 1280, height: 720 },
+    caption: "Illustrative project visual · MobileAction blog asset",
   },
   "pacing-monitor": {
     category: "MobileAction · Enterprise SaaS · Campaign Monitoring",
@@ -18,7 +19,7 @@ const previews = {
     outcome: "From one customer's need to a wider product capability",
     context: "Pacing Monitor was released to all eligible customers, and the original enterprise customer adopted and used it.",
     tags: ["Enterprise Discovery", "Product Design", "Technical Delivery"],
-    image: null,
+    image: { src: "assets/Pastel%20Pacing%20Monitor%20Dashboard.png", alt: "Pacing Monitor dashboard visual", width: 1448, height: 1086 },
   },
 };
 
@@ -63,7 +64,8 @@ export function renderFeaturedProjects(container, slugs, projects) {
       const image = element("img", "featured-screenshot");
       Object.assign(image, preview.image, { loading: "lazy", decoding: "async" });
       image.addEventListener("error", () => visual.replaceChildren(placeholder()));
-      visual.append(image, element("figcaption", "", "Released product · MobileAction public Help Center"));
+      visual.append(image);
+      if (preview.caption) visual.append(element("figcaption", "", preview.caption));
     } else {
       visual.classList.add("featured-visual-missing");
       visual.append(placeholder());
