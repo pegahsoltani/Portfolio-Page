@@ -20,14 +20,17 @@ export const profile = {
 };
 
 export const home = {
-  aboutLabel: "A little about me",
+  aboutLabel: "A LITTLE ABOUT ME",
   aboutHeadline: "Finding the human side of technology.",
   about: [
     "My background in Computer Engineering and over five years in product management has shaped the way I approach problems: stay curious, understand the people involved, and find practical ways to turn complexity into something useful.",
-    "Before working in tech, I spent several years teaching English. That experience taught me to listen carefully, adapt how I communicate, and appreciate that understanding someone's perspective is often the first step toward helping them.",
-    "Today, what I enjoy most about product management is connecting the dots between customer needs and technical possibilities. I've worked across B2B SaaS, AdTech, and consumer products, collaborating with customers, designers, engineers, and data scientists to shape ideas, question assumptions, navigate trade-offs, and deliver products people can use.",
-    "I'm also continually exploring what's next. Recently, I've been learning more about AI product development, agentic workflows, and AI-assisted prototyping—especially how these technologies can address real problems rather than simply add another layer of complexity.",
   ],
+  aboutPeopleTitle: "People first",
+  aboutPeopleDescription: "Teaching English helped me develop the listening, communication, and adaptability skills I still use today.",
+  aboutConnectingTitle: "Connecting the dots",
+  aboutConnectingDescription: "I enjoy exploring customer needs, technical possibilities, and trade-offs with cross-functional teams to build useful products.",
+  aboutExploringTitle: "Always exploring",
+  aboutExploringDescription: "Currently learning more about AI products, agentic workflows, and how emerging technologies can solve real problems.",
   aboutClosing: "Good product management, to me, starts with curiosity about people and the discipline to turn what we learn into better decisions.",
   dublin: [
     "I recently moved to Dublin, and I’m already growing very fond of this city. There’s something lovely about starting fresh somewhere new — the streets you slowly get to know, the little places that become your favourites, and the people who make an unfamiliar place feel welcoming.",
