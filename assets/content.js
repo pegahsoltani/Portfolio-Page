@@ -20,13 +20,15 @@ export const profile = {
 };
 
 export const home = {
+  aboutLabel: "A little about me",
+  aboutHeadline: "Finding the human side of technology.",
   about: [
-    "Hi, I’m Pegah! 👋",
-    "I’m a Technical Product Manager with a background in Computer Engineering and 5+ years of experience working across B2B SaaS, consumer platforms, and enterprise software.",
-    "What I enjoy most about product management is taking a complicated problem, understanding what people actually need, and working with a team to turn that understanding into something useful.",
-    "Over the years, I’ve worked on everything from advertising optimization and experimentation tools to consumer platforms, SaaS products, and AI-powered experiences. These projects have taught me to combine curiosity and customer insights with analytical thinking, technical understanding, and practical delivery.",
-    "I’m especially interested in products where technology solves meaningful problems, and I’m currently expanding my experience in AI product development and AI-assisted prototyping.",
+    "My background in Computer Engineering and over five years in product management has shaped the way I approach problems: stay curious, understand the people involved, and find practical ways to turn complexity into something useful.",
+    "Before working in tech, I spent several years teaching English. That experience taught me to listen carefully, adapt how I communicate, and appreciate that understanding someone's perspective is often the first step toward helping them.",
+    "Today, what I enjoy most about product management is connecting the dots between customer needs and technical possibilities. I've worked across B2B SaaS, AdTech, and consumer products, collaborating with customers, designers, engineers, and data scientists to shape ideas, question assumptions, navigate trade-offs, and deliver products people can use.",
+    "I'm also continually exploring what's next. Recently, I've been learning more about AI product development, agentic workflows, and AI-assisted prototyping—especially how these technologies can address real problems rather than simply add another layer of complexity.",
   ],
+  aboutClosing: "Good product management, to me, starts with curiosity about people and the discipline to turn what we learn into better decisions.",
   dublin: [
     "I recently moved to Dublin, and I’m already growing very fond of this city. There’s something lovely about starting fresh somewhere new — the streets you slowly get to know, the little places that become your favourites, and the people who make an unfamiliar place feel welcoming.",
     "So far, I’ve been enjoying long walks and exploring the outdoors, visiting local pubs, and meeting wonderful people along the way. Every week seems to bring a new discovery (and usually a new place I want to go back to).",

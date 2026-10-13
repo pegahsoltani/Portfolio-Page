@@ -1,0 +1,13 @@
+/* Approved V1: styling is confined to Home's About Me section. */
+#home-about { max-width: none; padding-top: 40px; border-top: 1px solid var(--surface-border); }
+#home-about .about-label { margin: 0 0 12px; font-size: 14px; font-weight: 500; color: #665b51; }
+#home-about h2 { font-size: 32px; margin-bottom: 24px; }
+#home-about .about-copy { max-width: 70ch; }
+#home-about .about-copy p { margin-bottom: 18px; }
+#home-about .about-copy p:last-child { margin-bottom: 0; }
+#home-about .about-closing { max-width: 70ch; margin: 24px 0 0; padding-left: 18px; border-left: 2px solid #d9d0c7; font-size: 17px; color: #62656d; line-height: 1.7; }
+@media (max-width: 700px) {
+  #home-about { padding-top: 30px; }
+  #home-about h2 { font-size: 28px; }
+  #home-about .about-closing { font-size: 16px; }
+}
