@@ -1,0 +1,45 @@
+/* Shared artboards and informational tags for Home and Projects cards only. */
+:is(#home-featured-projects, #projects-gallery) .project-card-media {
+  min-width: 0;
+  height: clamp(240px, 25vw, 320px);
+  display: grid;
+  place-items: center;
+  padding: 12px;
+  background: var(--color-cloud);
+  opacity: 1;
+  filter: none;
+}
+:is(#home-featured-projects, #projects-gallery) [data-project="cpp-ab-testing"] .project-card-media { background: var(--color-navy); }
+:is(#home-featured-projects, #projects-gallery) .project-card-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  max-width: 1280px;
+  max-height: 1086px;
+  margin: 0;
+  object-fit: contain;
+  object-position: center;
+  opacity: 1;
+  filter: none;
+  box-shadow: none;
+}
+:is(#home-featured-projects, #projects-gallery) .project-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--color-navy);
+}
+:is(#home-featured-projects, #projects-gallery) .project-card-tags li {
+  max-width: 100%;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: var(--color-cloud);
+  overflow-wrap: anywhere;
+}
