@@ -1,12 +1,12 @@
 /* Local styling for the approved Dublin photo story. */
-#home-dublin { padding: 28px; border: 0; border-radius: 10px; background: #faf8f4; color: #282724; }
+#home-dublin { padding: 28px; border: 0; border-radius: 10px; background: var(--color-ivory); color: var(--color-midnight); }
 #home-dublin .dublin-layout { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 32px; align-items: center; }
 #home-dublin img { display: block; width: 100%; height: auto; border-radius: 14px; box-shadow: none; }
 #home-dublin .dublin-story { min-width: 0; }
-#home-dublin .dublin-label { font-size: 12px; line-height: 1.6; font-weight: 500; letter-spacing: .09em; margin: 0 0 14px; color: #66564a; }
-#home-dublin h2 { font-size: 32px; line-height: 1.25; margin-bottom: 22px; color: #282724; }
+#home-dublin .dublin-label { font-size: 12px; line-height: 1.6; font-weight: 500; letter-spacing: .09em; margin: 0 0 14px; color: var(--color-slate); }
+#home-dublin h2 { font-size: 32px; line-height: 1.25; margin-bottom: 22px; color: var(--color-midnight); }
 #home-dublin .dublin-copy { max-width: 65ch; }
-#home-dublin .dublin-copy p { font-size: 18px; line-height: 1.65; margin-bottom: 16px; color: #514e49; }
+#home-dublin .dublin-copy p { font-size: 18px; line-height: 1.65; margin-bottom: 16px; color: var(--color-slate); }
 #home-dublin .dublin-copy p:last-child { margin-bottom: 0; }
 @media (max-width: 900px) {
   #home-dublin .dublin-layout { grid-template-columns: minmax(0, 1fr); gap: 28px; }

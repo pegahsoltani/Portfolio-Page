@@ -1,22 +1,22 @@
 /* Local warm editorial styling; no other project page styles are changed. */
-body.pacing-story-page { background: #fff; }
-.pacing-story { --pacing-heading: #282724; --pacing-body: #514e49; --pacing-accent: #618273; --pacing-ink: #456557; max-width: 1240px; padding: 0 5% 48px; }
+body.pacing-story-page { background: var(--color-white); }
+.pacing-story { --pacing-heading: var(--color-midnight); --pacing-body: var(--color-slate); --pacing-accent: var(--color-rose); --pacing-ink: var(--color-slate); max-width: 1240px; padding: 0 5% 48px; }
 .pacing-story p, .pacing-story li, .pacing-story dd { color: var(--pacing-body); font-size: 18px; font-weight: 400; line-height: 1.75; }
 .pacing-story p { margin: 0 0 18px; }
 .pacing-story a { color: var(--pacing-ink); }
-.pacing-story a:focus-visible, .pacing-story summary:focus-visible { outline: 3px solid #8f765d; outline-offset: 4px; }
+.pacing-story a:focus-visible, .pacing-story summary:focus-visible { outline: 3px solid var(--color-slate); outline-offset: 4px; }
 .pacing-return { display: flex; flex-wrap: wrap; gap: 24px; font-size: 15px; padding: 8px 0 24px; }
-.pacing-hero { padding: 32px; background: #f8f5ef; border-radius: 10px; }
-.pacing-story .pacing-eyebrow, .pacing-story .pacing-index { font-size: 12px; font-weight: 500; letter-spacing: .1em; color: #66564a; margin-bottom: 14px; }
+.pacing-hero { padding: 32px; background: var(--color-ivory); border-radius: 10px; }
+.pacing-story .pacing-eyebrow, .pacing-story .pacing-index { font-size: 12px; font-weight: 500; letter-spacing: .1em; color: var(--color-slate); margin-bottom: 14px; }
 .pacing-story .pacing-index { text-transform: uppercase; }
 .pacing-hero h1 { max-width: 24ch; margin: 0 0 20px; color: var(--pacing-heading); font-size: clamp(36px, 4vw, 56px); line-height: 1.1; font-weight: 650; letter-spacing: -.03em; }
 .pacing-story .pacing-deck { max-width: 76ch; font-size: 20px; line-height: 1.6; margin-bottom: 24px; }
 .pacing-metadata { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px 24px; margin: 0; }
-.pacing-metadata dt { font-size: 12px; font-weight: 500; color: #66564a; margin-bottom: 4px; }
+.pacing-metadata dt { font-size: 12px; font-weight: 500; color: var(--color-slate); margin-bottom: 4px; }
 .pacing-story .pacing-metadata dd { font-size: 14px; line-height: 1.6; margin: 0; }
 .pacing-metadata > div:last-child { grid-column: span 2; }
-.pacing-story .pacing-outcome-spotlight { padding: 18px 0 0; margin: 24px 0 0; border-top: 1px solid #d8d0c6; color: var(--pacing-ink); font-size: 21px; font-weight: 550; line-height: 1.5; }
-.pacing-diagram { margin: 28px 0 0; padding: 24px; background: #e7eee9; border-radius: 8px; }
+.pacing-story .pacing-outcome-spotlight { padding: 18px 0 0; margin: 24px 0 0; border-top: 1px solid var(--color-border); color: var(--pacing-ink); font-size: 21px; font-weight: 550; line-height: 1.5; }
+.pacing-diagram { margin: 28px 0 0; padding: 24px; background: var(--color-ivory); border-radius: 8px; }
 .pacing-diagram h2 { font-size: 24px; font-weight: 550; color: var(--pacing-heading); line-height: 1.3; margin-bottom: 20px; }
 .pacing-flow { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; padding: 0; margin: 0; list-style: none; }
 .pacing-story .pacing-flow li { position: relative; min-width: 0; padding: 14px; border-radius: 6px; background: white; font-size: 16px; line-height: 1.55; }
@@ -24,7 +24,7 @@ body.pacing-story-page { background: #fff; }
 .pacing-step-number { display: block; color: var(--pacing-ink); font-size: 12px; font-weight: 600; margin-bottom: 8px; }
 .pacing-diagram figcaption { color: var(--pacing-body); font-size: 13px; line-height: 1.65; margin-top: 18px; }
 .pacing-reading { max-width: 740px; margin: 0 auto; }
-.pacing-section { margin-top: 56px; padding-top: 32px; border-top: 1px solid #e7e1d8; scroll-margin-top: 24px; }
+.pacing-section { margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--color-border); scroll-margin-top: 24px; }
 .pacing-section h2 { color: var(--pacing-heading); font-size: clamp(29px, 3vw, 38px); font-weight: 600; line-height: 1.25; margin-bottom: 24px; letter-spacing: -.02em; }
 .pacing-story h3 { color: var(--pacing-heading); font-size: 21px; font-weight: 550; line-height: 1.4; margin-bottom: 14px; }
 .pacing-story blockquote { margin: 24px 0 0; padding: 8px 0 8px 22px; border-left: 3px solid var(--pacing-accent); color: var(--pacing-ink); font-size: 23px; line-height: 1.5; font-weight: 500; }
@@ -33,25 +33,25 @@ body.pacing-story-page { background: #fff; }
 .pacing-story .pacing-insight { color: var(--pacing-ink); font-size: 18px; font-weight: 500; margin-top: 24px; }
 .pacing-decisions-diagram { padding: 0; background: transparent; }
 .pacing-decisions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
-.pacing-decision { padding: 20px; border-radius: 8px; background: #e7eee9; }
+.pacing-decision { padding: 20px; border-radius: 8px; background: var(--color-ivory); }
 .pacing-decision h3 { font-size: 19px; }
 .pacing-decision dl { margin: 0; }
 .pacing-decision dt { font-size: 14px; font-weight: 600; color: var(--pacing-heading); margin-bottom: 6px; }
 .pacing-story .pacing-decision dd { font-size: 16px; line-height: 1.7; margin: 0 0 18px; }
 .pacing-decision dd:last-child { margin-bottom: 0; }
 #pacing-delivery .pacing-flow { grid-template-columns: repeat(6, minmax(0, 1fr)); }
-.pacing-verified-outcome { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; background: #f8f5ef; padding: 24px; border-radius: 8px; margin-top: 28px; }
+.pacing-verified-outcome { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; background: var(--color-ivory); padding: 24px; border-radius: 8px; margin-top: 28px; }
 .pacing-verified-outcome strong { color: var(--pacing-ink); font-size: 24px; font-weight: 600; line-height: 1.35; }
 .pacing-story .pacing-verified-outcome p { grid-column: 1 / -1; font-size: 14px; margin: 0; }
-.pacing-extra-notes { margin-top: 40px; border-top: 1px solid #d8d0c6; border-bottom: 1px solid #d8d0c6; padding: 18px 0; }
+.pacing-extra-notes { margin-top: 40px; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); padding: 18px 0; }
 .pacing-story summary { cursor: pointer; font-size: 16px; font-weight: 500; color: var(--pacing-ink); }
 .pacing-extra-notes > p { margin-top: 18px; }
 .pacing-note-group { margin-top: 26px; }
 .pacing-note-group h3 { margin-top: 20px; }
-.pacing-evidence { margin-top: 40px; padding-top: 26px; border-top: 1px solid #d8d0c6; }
+.pacing-evidence { margin-top: 40px; padding-top: 26px; border-top: 1px solid var(--color-border); }
 .pacing-evidence h2 { font-size: 25px; color: var(--pacing-heading); }
 .pacing-story .pacing-evidence p { font-size: 16px; line-height: 1.75; }
-.pacing-story footer { border-top: 1px solid #e7e1d8; padding-top: 28px; margin-top: 40px; }
+.pacing-story footer { border-top: 1px solid var(--color-border); padding-top: 28px; margin-top: 40px; }
 .pacing-verified-images { margin-top: 28px; }
 .pacing-product-image { max-width: 1040px; margin: 24px auto; }
 .pacing-product-image img { display: block; width: 100%; height: auto; object-fit: contain; border-radius: 8px; }

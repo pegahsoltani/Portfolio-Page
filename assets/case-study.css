@@ -1,27 +1,27 @@
-.case-study { max-width: 1440px; --case-color: var(--cpp-purple); --case-link: #3535a8; }
-.pacing-case-study .case-study { --case-color: var(--pacing-teal); --case-link: #0b5953; }
+.case-study { max-width: 1440px; --case-color: var(--cpp-purple); --case-link: var(--color-slate); }
+.pacing-case-study .case-study { --case-color: var(--pacing-teal); --case-link: var(--color-slate); }
 .case-return { display: flex; flex-wrap: wrap; gap: 24px; padding: 18px 6% 28px; font-size: 15px; }
-.case-hero { margin: 0 3%; background: var(--case-color); color: white; border-radius: 14px; box-shadow: 0 20px 48px -30px rgb(20 28 44 / 55%); }
+.case-hero { margin: 0 3%; background: var(--color-ivory); color: var(--color-midnight); border-radius: 14px; box-shadow: 0 20px 48px -30px rgb(var(--color-midnight-rgb) / 55%); }
 .case-hero-inner { max-width: 1040px; margin: auto; padding: 72px 6% 64px; }
 .case-eyebrow { margin: 0 0 24px; text-transform: uppercase; letter-spacing: .16em; font-weight: 500; font-size: 15px; }
 .case-hero h1 { max-width: 920px; font-size: clamp(40px, 6.2vw, 88px); font-weight: 750; line-height: 1.06; letter-spacing: -.035em; margin: 0 0 36px; }
 .case-introduction { font-size: clamp(20px, 2.2vw, 27px); line-height: 1.55; font-weight: 350; margin: 0; max-width: 750px; }
-.case-client { border-left: 2px solid rgb(255 255 255 / 65%); padding: 4px 0 4px 22px; font-size: 35px; font-weight: 600; margin: 36px 0 18px; }
+.case-client { border-left: 2px solid var(--color-border); padding: 4px 0 4px 22px; font-size: 35px; font-weight: 600; margin: 36px 0 18px; }
 .case-metadata { font-size: 15px; font-weight: 400; margin: 0; line-height: 1.6; }
-.case-result { max-width: 780px; margin: 36px 0 0; padding-top: 26px; border-top: 1px solid rgb(255 255 255 / 35%); font-size: 19px; line-height: 1.7; font-weight: 350; }
+.case-result { max-width: 780px; margin: 36px 0 0; padding-top: 26px; border-top: 1px solid var(--color-border); font-size: 19px; line-height: 1.7; font-weight: 350; }
 .case-result strong { font-weight: 600; }
 .case-body { max-width: 1040px; margin: auto; padding: 64px 6%; }
 .case-body section { margin: 88px 0 0; }
 .case-body h2 { margin: 0 0 30px; font-size: clamp(30px, 3.5vw, 46px); font-weight: 650; line-height: 1.18; letter-spacing: -.02em; }
 .case-body h3 { font-size: 19px; text-transform: uppercase; letter-spacing: .08em; font-weight: 600; line-height: 1.6; margin: 40px 0 22px; }
-.case-body p { font-size: 21px; font-weight: 400; line-height: 1.85; margin: 0 0 24px; color: #444850; }
+.case-body p { font-size: 21px; font-weight: 400; line-height: 1.85; margin: 0 0 24px; color: var(--color-slate); }
 .case-body strong { font-weight: 600; }
 .case-body a { color: var(--case-link); overflow-wrap: anywhere; }
 .case-body figure { margin: 44px 0 32px; }
 .case-body > figure:first-child { margin-top: 0; }
 .case-body img { display: block; width: 100%; height: auto; border: 1px solid var(--surface-border); border-radius: 8px; box-shadow: var(--media-shadow); }
-.case-body figcaption { font-size: 14px; line-height: 1.6; color: #59596b; margin-top: 14px; }
-.case-study > footer { border-top: 1px solid #e5e5ef; padding-top: 28px; padding-bottom: 48px; }
+.case-body figcaption { font-size: 14px; line-height: 1.6; color: var(--color-slate); margin-top: 14px; }
+.case-study > footer { border-top: 1px solid var(--color-border); padding-top: 28px; padding-bottom: 48px; }
 @media (max-width: 700px) {
   .case-hero { margin: 0 4%; border-radius: 12px; }
   .case-hero-inner { padding: 44px 8%; }

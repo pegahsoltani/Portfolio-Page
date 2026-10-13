@@ -1,24 +1,24 @@
 .cv-page { max-width: 1100px; padding: 28px 6% 64px; }
 .cv-heading { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 24px; margin-bottom: 20px; }
 .cv-heading h1 { font-size: clamp(30px, 3.2vw, 44px); margin-bottom: 12px; }
-.cv-heading .cv-tagline { max-width: 60ch; margin: 0; color: #514e49; font-size: 18px; line-height: 1.6; }
-.cv-download { display: inline-flex; align-items: center; min-height: 44px; padding: 12px 20px; border-radius: 6px; color: white; background: #282724; font-size: 15px; font-weight: 500; text-decoration: none; }
-.cv-download:hover { background: #44413b; }
-.cv-eligibility, .cv-contact { color: #514e49; font-size: 15px; line-height: 1.6; margin: 0 0 12px; }
+.cv-heading .cv-tagline { max-width: 60ch; margin: 0; color: var(--color-slate); font-size: 18px; line-height: 1.6; }
+.cv-download { display: inline-flex; align-items: center; min-height: 44px; padding: 12px 20px; border-radius: 6px; color: var(--color-ivory); background: var(--color-midnight); font-size: 15px; font-weight: 500; text-decoration: none; }
+.cv-download:hover { background: var(--color-slate); }
+.cv-eligibility, .cv-contact { color: var(--color-slate); font-size: 15px; line-height: 1.6; margin: 0 0 12px; }
 .cv-contact a { display: inline-block; margin-left: 16px; overflow-wrap: anywhere; }
 .cv-document section { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--surface-border); }
 .cv-document h2 { font-size: 20px; font-weight: 600; letter-spacing: .06em; margin: 0 0 18px; }
-.cv-document p, .cv-document li { font-size: 17px; line-height: 1.7; color: #444850; }
+.cv-document p, .cv-document li { font-size: 17px; line-height: 1.7; color: var(--color-slate); }
 .cv-document p { margin: 0 0 14px; }
 .cv-document ul { margin: 0; padding-left: 22px; }
 .cv-document li { margin-bottom: 10px; }
-.cv-document strong { font-weight: 600; color: #282724; }
+.cv-document strong { font-weight: 600; color: var(--color-midnight); }
 .cv-entry + .cv-entry { margin-top: 30px; }
 .cv-entry-heading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; }
 .cv-entry-heading h3 { font-size: 21px; font-weight: 550; line-height: 1.4; margin: 0 0 6px; }
-.cv-entry-heading .cv-dates { font-size: 15px; margin: 0 0 6px; color: #62656d; }
-.cv-document .cv-company { font-size: 17px; font-weight: 500; color: #282724; margin-bottom: 6px; }
-.cv-document .cv-context { font-size: 15px; color: #62656d; margin-bottom: 14px; }
+.cv-entry-heading .cv-dates { font-size: 15px; margin: 0 0 6px; color: var(--color-slate); }
+.cv-document .cv-company { font-size: 17px; font-weight: 500; color: var(--color-midnight); margin-bottom: 6px; }
+.cv-document .cv-context { font-size: 15px; color: var(--color-slate); margin-bottom: 14px; }
 @media (max-width: 700px) {
   .cv-page { padding: 22px 8% 48px; }
   .cv-document h2 { font-size: 18px; }
