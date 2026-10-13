@@ -6,10 +6,10 @@ body.pacing-story-page { background: var(--color-white); }
 .pacing-story a { color: var(--pacing-ink); }
 .pacing-story a:focus-visible, .pacing-story summary:focus-visible { outline: 3px solid var(--color-slate); outline-offset: 4px; }
 .pacing-return { display: flex; flex-wrap: wrap; gap: 24px; font-size: 15px; padding: 8px 0 24px; }
-.pacing-hero { padding: 32px; background: var(--color-ivory); border-radius: 10px; }
+.pacing-hero { padding: 32px; background: var(--color-navy); border-radius: 10px; }
 .pacing-story .pacing-eyebrow, .pacing-story .pacing-index { font-size: 12px; font-weight: 500; letter-spacing: .1em; color: var(--color-slate); margin-bottom: 14px; }
 .pacing-story .pacing-index { text-transform: uppercase; }
-.pacing-hero h1 { max-width: 24ch; margin: 0 0 20px; color: var(--pacing-heading); font-size: clamp(36px, 4vw, 56px); line-height: 1.1; font-weight: 650; letter-spacing: -.03em; }
+.pacing-hero h1 { max-width: 24ch; margin: 0 0 20px; color: var(--color-cloud); font-size: clamp(36px, 4vw, 56px); line-height: 1.1; font-weight: 650; letter-spacing: -.03em; }
 .pacing-story .pacing-deck { max-width: 76ch; font-size: 20px; line-height: 1.6; margin-bottom: 24px; }
 .pacing-metadata { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px 24px; margin: 0; }
 .pacing-metadata dt { font-size: 12px; font-weight: 500; color: var(--color-slate); margin-bottom: 4px; }
@@ -56,6 +56,14 @@ body.pacing-story-page { background: var(--color-white); }
 .pacing-product-image { max-width: 1040px; margin: 24px auto; }
 .pacing-product-image img { display: block; width: 100%; height: auto; object-fit: contain; border-radius: 8px; }
 .pacing-product-image figcaption { margin-top: 10px; color: var(--pacing-body); font-size: 13px; line-height: 1.6; }
+/* Scope light text to the existing navy hero; long-form narrative remains light. */
+.pacing-story .pacing-hero .pacing-eyebrow,
+.pacing-story .pacing-hero .pacing-deck,
+.pacing-story .pacing-hero .pacing-metadata dt,
+.pacing-story .pacing-hero .pacing-metadata dd,
+.pacing-story .pacing-hero .pacing-outcome-spotlight { color: var(--color-cloud); }
+.pacing-story .pacing-hero .pacing-outcome-spotlight { border-color: var(--color-silver); }
+.pacing-hero a:focus-visible { outline-color: var(--color-cloud); }
 @media (max-width: 900px) {
   .pacing-decisions { grid-template-columns: minmax(0, 1fr); }
   .pacing-metadata { grid-template-columns: repeat(2, minmax(0, 1fr)); }
