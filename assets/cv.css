@@ -1,5 +1,5 @@
 /* Hybrid web CV. All selectors are confined to the existing CV route. */
-.cv-page { max-width: 1100px; padding: 28px 6% 64px; color: var(--color-midnight); }
+.cv-page { max-width: 1100px; padding: 28px 6% 64px; color: var(--color-navy); }
 .cv-page p, .cv-page li { color: var(--color-slate); font-size: 17px; line-height: 1.7; }
 .cv-page p { margin: 0 0 14px; }
 .cv-page h2 { font-size: 26px; font-weight: 600; margin: 0 0 22px; }
@@ -11,32 +11,32 @@
 .cv-page .cv-subtitle { font-size: 18px; font-weight: 500; line-height: 1.6; margin-bottom: 16px; }
 .cv-lead, .cv-summary p { max-width: 75ch; }
 .cv-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 22px 0 18px; }
-.cv-actions a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 12px 20px; border-radius: 6px; font-size: 15px; font-weight: 500; text-decoration: none; border: 1px solid var(--color-midnight); }
-.cv-actions .cv-download { color: var(--color-ivory); background: var(--color-midnight); }
+.cv-actions a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 12px 20px; border-radius: 6px; font-size: 15px; font-weight: 500; text-decoration: none; border: 1px solid var(--color-navy); }
+.cv-actions .cv-download { color: var(--color-cloud); background: var(--color-navy); }
 .cv-download:hover { background: var(--color-slate); }
-.cv-linkedin { background: var(--color-ivory); }
+.cv-actions .cv-linkedin { background: var(--color-cloud); color: var(--color-navy); }
 .cv-linkedin:hover { background: var(--color-ivory-hover); }
 .cv-page .cv-eligibility { font-size: 15px; line-height: 1.6; margin-bottom: 16px; }
 .cv-metadata { display: flex; flex-wrap: wrap; gap: 8px 20px; list-style: none; padding: 0; margin: 0; }
 .cv-page .cv-metadata li { font-size: 13px; line-height: 1.6; }
-.cv-section { margin-top: 32px; padding-top: 26px; border-top: 1px solid var(--color-border); }
+.cv-section { margin-top: 32px; padding-top: 26px; border-top: 1px solid var(--color-silver); }
 .cv-achievements { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-.cv-achievement { padding: 20px; background: var(--color-ivory); border: 1px solid var(--color-border); border-radius: 10px; }
+.cv-achievement { padding: 20px; background: var(--color-cloud); border: 1px solid var(--color-silver); border-radius: 10px; }
 .cv-achievement h3 { font-size: 19px; font-weight: 550; }
 .cv-achievement p { font-size: 16px; line-height: 1.65; margin: 0; }
-.cv-timeline { list-style: none; margin: 0; padding: 0 0 0 22px; border-left: 1px solid var(--color-mauve); }
+.cv-timeline { list-style: none; margin: 0; padding: 0 0 0 22px; border-left: 1px solid var(--color-silver); }
 .cv-timeline-item { position: relative; padding: 0 0 28px; }
 .cv-timeline-item:last-child { padding-bottom: 0; }
-.cv-timeline-item::before { content: ""; position: absolute; left: -27px; top: 8px; width: 9px; height: 9px; border-radius: 50%; background: var(--color-mauve); }
-.cv-timeline-item:first-child::before { background: var(--color-rose); }
+.cv-timeline-item::before { content: ""; position: absolute; left: -27px; top: 8px; width: 9px; height: 9px; border-radius: 50%; background: var(--color-silver); }
+.cv-timeline-item:first-child::before { background: var(--color-silver); }
 .cv-role-heading { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px 24px; align-items: baseline; }
 .cv-role-heading h3 { margin-bottom: 6px; }
 .cv-page .cv-dates { font-size: 14px; line-height: 1.6; margin: 0 0 8px; }
-.cv-page .cv-employer { font-size: 16px; font-weight: 500; color: var(--color-midnight); margin-bottom: 6px; }
+.cv-page .cv-employer { font-size: 16px; font-weight: 500; color: var(--color-navy); margin-bottom: 6px; }
 .cv-page .cv-company-description { font-size: 15px; line-height: 1.6; margin-bottom: 12px; max-width: 75ch; }
-.cv-page .cv-role-highlight { font-size: 16px; font-weight: 500; color: var(--color-midnight); line-height: 1.65; max-width: 75ch; margin-bottom: 8px; }
+.cv-page .cv-role-highlight { font-size: 16px; font-weight: 500; color: var(--color-navy); line-height: 1.65; max-width: 75ch; margin-bottom: 8px; }
 .cv-details-toggle { display: inline-flex; align-items: center; min-height: 44px; padding: 8px 14px; border: 1px solid var(--color-slate); border-radius: 6px; background: var(--color-white); color: var(--color-slate); font: inherit; font-size: 14px; cursor: pointer; }
-.cv-details-toggle:hover { background: var(--color-ivory); }
+.cv-details-toggle:hover { background: var(--color-cloud); }
 .cv-role-details { margin-top: 16px; max-width: 75ch; }
 .cv-role-bullets { margin: 0; padding-left: 22px; }
 .cv-role-bullets li { font-size: 16px; line-height: 1.7; margin-bottom: 10px; }
@@ -48,7 +48,7 @@
 .cv-skill-group p { font-size: 16px; line-height: 1.65; margin: 0; }
 .cv-learning { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
 .cv-learning h3 { font-size: 18px; }
-.cv-page .cv-university { color: var(--color-midnight); font-weight: 500; margin-bottom: 4px; }
+.cv-page .cv-university { color: var(--color-navy); font-weight: 500; margin-bottom: 4px; }
 .cv-learning p { font-size: 16px; line-height: 1.65; }
 .cv-languages { list-style: none; padding: 0; margin: 0; }
 .cv-languages li { font-size: 16px; line-height: 1.65; margin-bottom: 8px; }
