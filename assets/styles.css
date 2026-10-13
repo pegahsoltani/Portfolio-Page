@@ -6,6 +6,7 @@
   font-display: swap;
 }
 :root {
+  --radius-panel: 14px;
   --color-navy: #2C3E50;
   --color-slate: #34495E;
   --color-sage-gray: #7F8C8D;
