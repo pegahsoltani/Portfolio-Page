@@ -1,3 +1,5 @@
+import { createProjectCarousel } from "./project-carousel.js";
+
 // Approved V1 copy for Home previews; project routes and titles stay shared.
 const previews = {
   "cpp-ab-testing": {
@@ -69,5 +71,5 @@ export function renderFeaturedProjects(container, slugs, projects) {
     story.append(copy, visual);
     return story;
   });
-  container.replaceChildren(...stories);
+  createProjectCarousel(container, stories);
 }
