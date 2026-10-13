@@ -51,7 +51,7 @@ body.pacing-story-page { background: var(--color-white); }
 .pacing-evidence { margin-top: 40px; padding-top: 26px; border-top: 1px solid var(--color-border); }
 .pacing-evidence h2 { font-size: 25px; color: var(--pacing-heading); }
 .pacing-story .pacing-evidence p { font-size: 16px; line-height: 1.75; }
-.pacing-story footer { border-top: 1px solid var(--color-border); padding-top: 28px; margin-top: 40px; }
+.pacing-story .pacing-project-navigation { border-top: 1px solid var(--color-border); padding-top: 28px; margin-top: 40px; }
 .pacing-verified-images { margin-top: 28px; }
 .pacing-product-image { max-width: 1040px; margin: 24px auto; }
 .pacing-product-image img { display: block; width: 100%; height: auto; object-fit: contain; border-radius: 8px; }
