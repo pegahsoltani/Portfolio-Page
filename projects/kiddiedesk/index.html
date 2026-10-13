@@ -1,53 +1,175 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>KiddieDesk · Pegah Soltani</title><link rel="stylesheet" href="../../assets/styles.css"></head><body><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><a class="wordmark" href="../../" aria-label="Pegah Soltani, Home">PS<span>.</span></a><nav aria-label="Main navigation"><a href="../../">Home</a><a href="../../projects/" aria-current="page">Projects</a><span aria-disabled="true" title="This section will be built in a later review">Case Studies</span><a href="../../cv/">CV</a></nav></header><main id="main" class="project-content"><a href="../">← Back to Projects</a> · <a href="../../#projects-heading">Back to Home</a><h1>KiddieDesk</h1><p class="project-subtitle">Preschool Operations, Reimagined</p><p class="project-meta">VenusSoft | Product Manager and Project Consultant | MVP in school use</p><h2>Company Overview</h2>
-<p>VenusSoft works with businesses to turn operational problems into software products. One of those projects was KiddieDesk, a multi-tenant SaaS platform designed for nurseries and preschools. The product brings school administration, classroom care records, parent communication, secure child handover, and financial workflows into a shared system.</p>
-<p>On paper, those might sound like separate features. In practice, they all revolve around the same people and information: a child, their family, the school, the class, and the staff members authorized to work with those records. The value of the platform depends on those connections remaining accurate from one workflow to the next.</p>
-<h2>Project Team</h2>
-<p>I worked on KiddieDesk as a <strong>Product Manager and Project Consultant</strong> through VenusSoft, collaborating with the customer and with UI/UX and Engineering contributors. My responsibilities covered shaping the product requirements, mapping role-based journeys, defining scope and acceptance criteria, creating functional AI-assisted prototypes, validating the proposed experience with the customer, and coordinating delivery.</p>
-<p>I used prototypes to make conversations more concrete. Instead of asking stakeholders to imagine how a requirement might work, I could walk through a proposed journey and discuss exactly what needed to happen on each screen.</p>
-<h2>Problem Space</h2>
-<p>The problem wasn&#x27;t simply that a preschool needed more screens or digital forms. The harder challenge was making everyday work consistent across people with very different responsibilities.</p>
-<p>A school director needs to organize classes, manage records, and see where information is missing. A teacher needs to record attendance and care activities while supervising children. A parent wants to understand what happened during their child&#x27;s day without navigating unrelated administrative material. Meanwhile, sensitive information must only be visible to the people who should have access to it.</p>
-<p>A disconnected approach to these tasks creates room for duplicated work, missing context, and inconsistent records. Our product challenge was to connect them without making routine actions more complicated.</p>
-<p>That led to a question guiding the design:</p>
-<p><strong>How might we make a preschool&#x27;s daily operations and parent communication feel like one reliable experience—while preserving the correct child, classroom, and access context at every step?</strong></p>
-<p>The source documentation establishes these workflow and consistency challenges. It does not provide a quantified pre-product baseline for staff hours saved, administrative errors, or parent satisfaction.</p>
-<h2>Project Scope</h2>
-<p>The broader product specification covers school records and enrollment, classroom care, parent communication, secure handover, financial operations, and platform administration. It also defines distinct experiences for school staff and families, with Turkish and English language support.</p>
-<p>Rather than treat every module as equally valuable for the first learning cycle, I framed the core experience around a connected daily journey: the school establishes the child and class relationship; the teacher records what happened; the parent sees the right child&#x27;s information; and management can identify gaps.</p>
-<h3>The core workflow</h3>
-<ol><li><strong>School administration:</strong> Establish the school, class, child, and family relationships.</li><li><strong>Teacher:</strong> Select a class, record attendance and care activities, handle exceptions, and confirm the result.</li><li><strong>Parent:</strong> Select the appropriate child and review the day&#x27;s information.</li><li><strong>School management:</strong> Identify incomplete records and follow up.</li></ol>
-<p>The portfolio MVP prioritization document identifies this as a <em>recommended pilot value slice</em>, not evidence that all the broader features were excluded from the delivered product. Financial workflows and external-provider integrations were identified as more dependency-heavy areas for a later pilot learning sequence.</p>
-<h2>Execution</h2>
-<h3>Turning a broad product idea into decisions the team could act on</h3>
-<p>A product like KiddieDesk has a deceptively large number of edge cases. A teacher might work across more than one class. A parent might have more than one child. A student may be absent, which is different from having no care entry recorded. An announcement being opened is not necessarily the same as a parent deliberately acknowledging it or granting permission.</p>
-<p>I structured the work through user journeys, product specifications, acceptance criteria, and cross-role workflows. The goal was to identify not only what users could click, but what the system should do with the information afterward.</p>
-<p>I then used AI-assisted, specification-driven prototyping with ChatGPT and OpenAI Codex to bring proposed workflows to life. That let me review the experience more directly before transitioning agreed decisions into design and engineering delivery.</p>
-<h3>The first important decision: Build around the child&#x27;s day</h3>
-<p>One documented UX decision concerned the parent&#x27;s home screen. Payment information had been given greater prominence, but the product direction shifted to put the <strong>child&#x27;s daily summary first</strong>.</p>
-<p>That seemingly small change says a lot about the product&#x27;s priorities. When a parent opens the app, the most immediate question may be, “How was my child&#x27;s day?” The product should help answer that question before introducing secondary administrative tasks.</p>
-<p>The documented implementation work also considered selecting a child, retaining that context during navigation, and presenting the experience on a narrow mobile screen. There is no measured retention or satisfaction uplift attributable to this decision in the available sources.</p>
-<h3>The second decision: A successful API isn&#x27;t a finished experience</h3>
-<p>During delivery, a particularly useful lesson came from comparing the software&#x27;s underlying capabilities with what people could actually accomplish in the interface.</p>
-<p>The project records documented endpoint-to-screen gaps, including a historical check that found <strong>59 endpoints without corresponding UI coverage across seven modules</strong>. That was not a current production defect count. It was a dated signal that technical delivery and user-facing delivery could diverge.</p>
-<p>The response was to treat each capability as an end-to-end experience. A feature needed a visible entry point, meaningful data, correct role access, and understandable behavior for loading, empty, failure, and permission states—not just an implemented backend route.</p>
-<p>That distinction changed the way I evaluated readiness: <strong>Can the intended user complete the job, with the correct data and safeguards?</strong></p>
-<h3>The third decision: Make daily recording efficient without hiding exceptions</h3>
-<p>For a teacher, repeating the same action child by child can make a routine task unnecessarily lengthy. The documented daily-care journey therefore supports selecting a class, applying a shared entry, changing individual exceptions, reviewing the result, and confirming it.</p>
-<p>That design introduces another requirement: one bulk action must not erase important differences between children. The product needs to distinguish children who were absent, entries that were left incomplete, and records that were successfully saved. Multi-class scenarios also need to preserve class-specific outcomes.</p>
-<p>I treated these situations as part of the product experience rather than edge cases to leave entirely to engineering interpretation.</p>
-<h2>Shipping the Iterations</h2>
-<p>Once the journeys were clearer, the next challenge was maintaining consistency between requirements, screens, and actual system behavior as the product evolved.</p>
-<p>A functional prototype is helpful because it exposes unclear decisions quickly. It can also create false confidence: a screen may look complete even when its data, permission rules, or error states have not been implemented. During KiddieDesk&#x27;s development, additional requests such as classroom-stream, assignment, and notification capabilities were documented as separate scope changes rather than silently treated as part of the original specification.</p>
-<p>I used this distinction to keep the product discussion grounded: what had been defined, what had been prototyped, what had been verified in development, and what still required release or customer acceptance.</p>
-<p>The development evidence includes dated checks of role isolation, parent daily-summary behavior, multi-class daily work, and browser/API interactions. It also records unresolved native-device, external-provider, file-handling, and production-readiness dependencies. Those checks demonstrate concrete implementation work, but they should not be presented as proof that every specified capability was production-ready.</p>
-<h2>Results</h2>
-<p>The meaningful product milestone is that <strong>KiddieDesk reached an MVP in use at a school</strong>, with rollout to further schools planned, based on my subsequently confirmed project experience. My work spanned discovery and customer walkthroughs through prototype validation and cross-functional MVP delivery.</p>
-<p>The earlier technical documentation provides additional, narrower evidence: developed local product surfaces, role-based workflow checks, and dated acceptance records for specific areas. These are complementary to the reported school usage, not interchangeable with it.</p>
-<p>I would not attribute an unverified percentage improvement to this project. The available source material does not establish a measured reduction in administrative time, improvement in parent engagement, paid-subscription conversion, or revenue generated. These are valuable measurements for the next phase rather than results to invent retroactively.</p>
-<p><strong>What I can stand behind:</strong> a structured product definition, a functional prototype used for validation, documented product decisions, a delivered MVP in school use, and a clearer framework for identifying gaps between what software supports technically and what users can actually do.</p>
-<h2>Looking Forward</h2>
-<p>With the first-school experience underway, the next step is to learn from real workflows rather than assume every feature in the wider specification deserves immediate expansion.</p>
-<p>I would focus measurement on whether teachers consistently complete daily records, whether parents can reliably access those records, how often administrators need to resolve missing information, and what support is required for an additional school to onboard successfully. Subscription and financial workflows can then be evaluated against real operational and commercial needs.</p>
-<p>The biggest lesson I take from KiddieDesk is that <strong>speeding up the creation of software is not the same as speeding up the creation of a usable product</strong>. AI-assisted prototyping made it easier to explore ideas and align on flows. Product management remained responsible for deciding which jobs mattered, identifying the exceptions, and ensuring that the final behavior matched the promise of the screen.</p>
-<p>That is the work I want this case study to demonstrate: taking a complicated, multi-role business problem and turning it into something people can understand, validate, and use.</p><p><a href="../">← Back to Projects</a> · <a href="../../#projects-heading">Back to Home</a></p></main></body></html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>KiddieDesk · Pegah Soltani</title><link rel="stylesheet" href="../../assets/styles.css"><link rel="stylesheet" href="../../assets/cpp-story.css"><link rel="stylesheet" href="../../assets/kiddiedesk-story.css"><meta name="description" content="Pegah Soltani’s KiddieDesk product story: customer discovery, AI-assisted prototype validation and cross-functional delivery of an MVP used at one school."></head><body class="cpp-story-page kiddiedesk-page"><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><a class="wordmark" href="../../" aria-label="Pegah Soltani, Home">PS<span>.</span></a><nav aria-label="Main navigation"><a href="../../">Home</a><a href="../../projects/" aria-current="page">Projects</a><span aria-disabled="true" title="This section will be built in a later review">Case Studies</span><a href="../../cv/">CV</a></nav></header><main id="main" class="cpp-story kiddiedesk-story"><div class="kiddie-return">
+<a href="../">← Back to Projects</a><a href="../../#projects-heading">Back to Home</a>
+</div>
+<header class="cpp-hero"><div class="cpp-hero-grid">
+<div>
+<p class="cpp-eyebrow">PRODUCT STORY 03 · VENUSSOFT · PRESCHOOL SAAS</p>
+<h1>Bringing preschool operations and parent communication together.</h1>
+<p class="cpp-deck">How I helped take KiddieDesk from customer discovery and a validated prototype through cross-functional MVP delivery to a product now used by a school.</p>
+<dl class="cpp-metadata">
+<div>
+<dt>Role</dt>
+<dd>Product Manager / Project Consultant</dd>
+</div>
+<div>
+<dt>Product</dt>
+<dd>Multi-role preschool operations SaaS</dd>
+</div>
+<div>
+<dt>Scope</dt>
+<dd>Discovery → MVP delivery</dd>
+</div>
+<div>
+<dt>Status</dt>
+<dd>MVP in active use at one school</dd>
+</div>
+</dl>
+</div>
+<figure class="kiddie-concept" id="kiddie-overview"><h2>A connected product experience</h2>
+<ul class="kiddie-flow" role="list">
+<li>
+<span class="kiddie-step-index" aria-hidden="true">01</span><span>School operations</span>
+</li>
+<li>
+<span class="kiddie-step-index" aria-hidden="true">02</span><span>Daily care</span>
+</li>
+<li>
+<span class="kiddie-step-index" aria-hidden="true">03</span><span>Family communication</span>
+</li>
+</ul>
+<figcaption>Conceptual product overview — not a screenshot of the released application.</figcaption></figure>
+</div>
+<div class="cpp-outcome-summary">
+<strong>A real school is using the delivered MVP.</strong><p>Further rollout is planned, not yet a claimed result.</p>
+</div></header><!-- Replace or supplement the conceptual overview only when image publication permission is verified. --><div id="kiddie-media-hero" class="kiddie-media-slot" hidden></div>
+<a class="cpp-read-story" href="#kiddie-challenge">Read the story ↓</a><article aria-label="KiddieDesk product story"><section id="kiddie-challenge" class="cpp-section" aria-labelledby="kiddie-challenge-heading"><div class="cpp-reading">
+<p class="cpp-number">01 · KIDDIEDESK</p>
+<h2 id="kiddie-challenge-heading">The challenge: one school, many connected workflows</h2>
+<p>Running a preschool involves more than managing classes and attendance. School teams handle administrative information, day-to-day care records, and communication with families. These activities involve different people, but they all rely on consistent information about children, classes, and the school day.</p>
+<p>KiddieDesk was developed as a multi-role SaaS platform to bring these connected areas into a shared product experience. The challenge for me as a PM was not simply organizing a list of requested features. It was understanding which users needed which information, how their tasks intersected, and how to turn that complexity into an MVP that a school could actually use.</p>
+<blockquote><strong>One product, different users, connected responsibilities.</strong></blockquote>
+</div>
+<!-- Optional approved image slot: add a figure with factual alt text, caption and attribution; then remove hidden. --><div id="kiddie-media-challenge" class="kiddie-media-slot" hidden></div></section><section id="kiddie-discovery" class="cpp-section" aria-labelledby="kiddie-discovery-heading"><div class="cpp-reading">
+<p class="cpp-number">02 · KIDDIEDESK</p>
+<h2 id="kiddie-discovery-heading">Discovery: understand the work before designing the screens</h2>
+<p>I worked with the customer to understand their needs, define the relevant user journeys, and translate the initial idea into a product scope the team could implement. The platform needed to support different contexts: school administration, teachers recording daily information, and parents following what mattered for their children. The broader product model also considered operational and platform-management responsibilities.</p>
+<p>Rather than treating every role as a separate product, I mapped the interactions and shared information between them. The goal was to make each experience understandable while keeping the underlying workflows connected.</p>
+</div>
+<figure id="kiddie-role-map" class="kiddie-concept"><h3>Role and workflow map</h3>
+<p class="kiddie-shared-context">Shared school and child context</p>
+<ul class="kiddie-role-list" role="list">
+<li>
+<strong>School Manager / Director</strong><span>School administration</span>
+</li>
+<li>
+<strong>Teacher</strong><span>Daily care records</span>
+</li>
+<li>
+<strong>Parent / Guardian</strong><span>Child-specific information</span>
+</li>
+</ul>
+<figcaption>Role and workflow map (conceptual, based on product definition) — not proof of each role’s released functionality.</figcaption></figure><!-- Optional approved image slot: add a figure with factual alt text, caption and attribution; then remove hidden. --><div id="kiddie-media-discovery" class="kiddie-media-slot" hidden></div></section><section id="kiddie-mvp" class="cpp-section" aria-labelledby="kiddie-mvp-heading"><div class="cpp-reading">
+<p class="cpp-number">03 · KIDDIEDESK</p>
+<h2 id="kiddie-mvp-heading">Scoping the MVP: turning a complex service into usable journeys</h2>
+<p>I translated discovery into user journeys, product specifications, and acceptance criteria. The product centered on school operations, everyday care records, and parent communication, with role-appropriate views into shared information.</p>
+<p>A useful way to explain the design is through three connected journeys:</p>
+<ul class="kiddie-journey-definitions">
+<li>
+<strong>School operations:</strong> organize the school context, including classes, children, and guardian relationships.</li>
+<li>
+<strong>Daily care:</strong> support staff in recording day-to-day information and handling relevant exceptions or corrections.</li>
+<li>
+<strong>Family communication:</strong> give parents a child-specific view of the information and updates intended for them.</li>
+</ul>
+<p>These are descriptions of the product's workflow domains. They should <strong>not</strong> be presented as a definitive inventory of every MVP feature delivered unless individually verified.</p>
+</div>
+<figure class="kiddie-concept" id="kiddie-workflows"><h3>Three connected journeys</h3>
+<ol class="kiddie-flow" role="list">
+<li>
+<span class="kiddie-step-index" aria-hidden="true">01</span><span>School context</span>
+</li>
+<li>
+<span class="kiddie-step-index" aria-hidden="true">02</span><span>Daily records</span>
+</li>
+<li>
+<span class="kiddie-step-index" aria-hidden="true">03</span><span>Parent-facing information</span>
+</li>
+</ol>
+<figcaption>Simplified product workflow — conceptual.</figcaption></figure><!-- Optional approved image slot: add a figure with factual alt text, caption and attribution; then remove hidden. --><div id="kiddie-media-mvp" class="kiddie-media-slot" hidden></div></section><section id="kiddie-product-decisions" class="cpp-section" aria-labelledby="kiddie-product-decisions-heading"><div class="cpp-reading">
+<p class="cpp-number">04 · KIDDIEDESK</p>
+<h2 id="kiddie-product-decisions-heading">Product decisions: keeping the roles connected without overcomplicating the experience</h2>
+<p>A multi-role product forces some important questions. How much context should each user see? Which information belongs to a shared record, and which interactions are specific to a role? How do we make common school tasks straightforward without ignoring edge cases?</p>
+<p>I used user flows, detailed requirements, and prototype walkthroughs to help the team resolve these questions before and during delivery. The product was designed around role-specific journeys grounded in a consistent school and child context, rather than making every user navigate the same interface.</p>
+<p>I also defined a subscription-based selling model as part of the SaaS product work. The business model needed to be considered alongside product scope rather than treated solely as a later marketing decision.</p>
+</div>
+<figure id="kiddie-decisions" class="kiddie-concept kiddie-decision-map"><div class="cpp-modules">
+<div class="cpp-module kiddie-decision"><dl>
+<dt>Question</dt>
+<dd><h3>Different user needs</h3></dd>
+<dt>Product approach</dt>
+<dd>Role-appropriate journeys</dd>
+<dt>Why it matters</dt>
+<dd>Reduce irrelevant complexity.</dd>
+</dl></div>
+<div class="cpp-module kiddie-decision"><dl>
+<dt>Question</dt>
+<dd><h3>Connected records</h3></dd>
+<dt>Product approach</dt>
+<dd>Shared school-child context</dd>
+<dt>Why it matters</dt>
+<dd>Keep workflows coherent.</dd>
+</dl></div>
+<div class="cpp-module kiddie-decision"><dl>
+<dt>Question</dt>
+<dd><h3>SaaS business model</h3></dd>
+<dt>Product approach</dt>
+<dd>Subscription-based selling model defined</dd>
+<dt>Why it matters</dt>
+<dd>Plan the product beyond a single installation.</dd>
+</dl></div>
+</div>
+<figcaption>Conceptual product decisions — explanatory summaries, not production interfaces or engineering architecture.</figcaption></figure><!-- Optional approved image slot: add a figure with factual alt text, caption and attribution; then remove hidden. --><div id="kiddie-media-product-decisions" class="kiddie-media-slot" hidden></div></section><section id="kiddie-delivery" class="cpp-section" aria-labelledby="kiddie-delivery-heading"><div class="cpp-reading">
+<p class="cpp-number">05 · KIDDIEDESK</p>
+<h2 id="kiddie-delivery-heading">Prototype to delivery: making requirements tangible</h2>
+<p>I used ChatGPT and OpenAI Codex to help create functional prototypes from structured specifications. Walking through the proposed experience with the customer gave us something concrete to react to: we could examine end-to-end journeys, clarify ambiguous requirements, and refine the expected behavior before handing the work into full UI/UX and engineering delivery.</p>
+<p>My role continued beyond prototyping. I coordinated with design and development, maintained delivery priorities, clarified acceptance criteria and dependencies, and followed the implementation against the agreed scope. This was cross-functional delivery, not a claim that I personally engineered the production application.</p>
+</div>
+<figure class="kiddie-concept" id="kiddie-delivery-flow"><h3>From discovery to MVP in use</h3>
+<ol class="kiddie-flow" role="list">
+<li>
+<span class="kiddie-step-index" aria-hidden="true">01</span><span>Discovery</span>
+</li>
+<li>
+<span class="kiddie-step-index" aria-hidden="true">02</span><span>Requirements</span>
+</li>
+<li>
+<span class="kiddie-step-index" aria-hidden="true">03</span><span>AI-assisted prototype</span>
+</li>
+<li>
+<span class="kiddie-step-index" aria-hidden="true">04</span><span>Customer validation</span>
+</li>
+<li>
+<span class="kiddie-step-index" aria-hidden="true">05</span><span>UI/UX &amp; Engineering</span>
+</li>
+<li>
+<span class="kiddie-step-index" aria-hidden="true">06</span><span>MVP in use</span>
+</li>
+</ol>
+<figcaption>Conceptual delivery sequence — no release dates or sprint counts are implied.</figcaption></figure><!-- Optional approved image slot: add a figure with factual alt text, caption and attribution; then remove hidden. --><div id="kiddie-media-delivery" class="kiddie-media-slot" hidden></div></section><section id="kiddie-outcome" class="cpp-section" aria-labelledby="kiddie-outcome-heading"><div class="cpp-reading">
+<p class="cpp-number">06 · KIDDIEDESK</p>
+<h2 id="kiddie-outcome-heading">Release and outcome: from prototype to a product in use</h2>
+<p>The most important confirmed result is straightforward: <strong>the KiddieDesk MVP was delivered and is being used by a school.</strong> Additional rollout to more schools is planned.</p>
+<p>That matters because the project moved beyond an idea or prototype into a working product used in a real setting. I would not attach an invented efficiency percentage, user count, school count beyond one, or subscription revenue figure to that achievement.</p>
+</div>
+<div class="kiddie-outcome-card"><strong>MVP delivered · In use at one school · Further rollout planned</strong></div>
+<!-- Optional approved image slot: add a figure with factual alt text, caption and attribution; then remove hidden. --><div id="kiddie-media-outcome" class="kiddie-media-slot" hidden></div></section><section id="kiddie-reflection" class="cpp-section" aria-labelledby="kiddie-reflection-heading"><div class="cpp-reading">
+<p class="cpp-number">07 · KIDDIEDESK</p>
+<h2 id="kiddie-reflection-heading">Looking back: my product takeaway</h2>
+<p>This project strengthened my experience taking a customer problem across the full product lifecycle: discovery, scope definition, tangible prototype validation, and delivery with a cross-functional team.</p>
+<p>It also reinforced a lesson about multi-role products: defining individual features is only part of the work. A PM needs to understand how people's workflows connect and make those relationships clear enough for both customers and the delivery team.</p>
+<p class="cpp-closing"><strong>A useful MVP is not just a collection of screens. It is a set of connected journeys that people can actually work with.</strong></p>
+</div>
+<!-- Optional approved image slot: add a figure with factual alt text, caption and attribution; then remove hidden. --><div id="kiddie-media-reflection" class="kiddie-media-slot" hidden></div></section></article><aside class="cpp-reading kiddie-evidence" aria-labelledby="kiddie-evidence-heading"><h2 id="kiddie-evidence-heading">Evidence &amp; confidentiality</h2>
+<p>This is a retrospective of a delivered client project. Diagrams on this page are simplified conceptual explanations based on the product definition and should not be mistaken for production screenshots, proprietary implementation details, or proof of each feature's release status. Use actual product images only when the asset and publication permission are verified.</p>
+<p>The available KiddieDesk image uploads have not been verified for publication as released-product screenshots. All visuals shown here are conceptual.</p></aside><footer class="cpp-footer"><a href="../">← Back to Projects</a><a href="../../#projects-heading">Back to Home</a></footer></main></body></html>
