@@ -5,42 +5,181 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pacing Monitor · Pegah Soltani</title>
 <link rel="stylesheet" href="../../assets/styles.css">
-<link rel="stylesheet" href="../../assets/case-study.css">
+<link rel="stylesheet" href="../../assets/pacing-story.css">
 <meta name="description" content="Pegah Soltani’s product management work on Pacing Monitor at MobileAction, from customer discovery to release.">
+<script type="module" src="../../assets/pacing-media.js"></script>
 </head>
-<body class="pacing-case-study">
-<a class="skip-link" href="#main">Skip to content</a><header class="site-header"><a class="wordmark" href="../../" aria-label="Pegah Soltani, Home">PS<span>.</span></a><nav aria-label="Main navigation"><a href="../../">Home</a><a href="../../projects/" aria-current="page">Projects</a><span aria-disabled="true" title="This section will be built in a later review">Case Studies</span><a href="../../cv/">CV</a></nav></header><main id="main" class="case-study">
-<div class="case-return">
+<body class="pacing-story-page">
+<a class="skip-link" href="#main">Skip to content</a><header class="site-header"><a class="wordmark" href="../../" aria-label="Pegah Soltani, Home">PS<span>.</span></a><nav aria-label="Main navigation"><a href="../../">Home</a><a href="../../projects/" aria-current="page">Projects</a><span aria-disabled="true" title="This section will be built in a later review">Case Studies</span><a href="../../cv/">CV</a></nav></header><main id="main" class="pacing-story"><div class="pacing-return">
 <a href="../">← Back to Projects</a><a href="../../#projects-heading">Back to Home</a>
 </div>
-<header class="case-hero"><div class="case-hero-inner">
-<p class="case-eyebrow">Pacing Monitor</p>
-<h1>Pacing Monitor</h1>
-<p class="case-introduction">Turning a migration requirement into proactive, goal-based campaign monitoring</p>
-<p class="case-client">MobileAction</p>
-<p class="case-metadata">MobileAction | Apple Ads Campaign Management Platform | Product Manager | Released to all customers</p>
-<p class="case-result"><strong>The result:</strong> Pacing Monitor was implemented and released to all eligible MobileAction customers. The original migrating customer adopted and used the released feature.</p>
-</div></header>
-<article class="case-body" aria-label="Pacing Monitor project narrative"><section aria-labelledby="project-overview"><h2 id="project-overview">Project Overview</h2>
-<p>Pacing Monitor is a goal-oriented campaign performance monitoring feature within MobileAction’s Apple Ads management platform. Advertisers can organize related campaigns into monitoring groups, set targets over recurring business cycles, define acceptable risk ranges and quickly identify whether performance is progressing as expected. The initiative originated with an advertiser migrating from Skai who relied on a comparable pacing-monitoring workflow. Our broader strategic objective, however, was to address a competitive capability gap and make the resulting feature useful across MobileAction’s customer base. As Product Manager, I participated in customer discovery, defined business rules and functional requirements, created initial wireframes, collaborated with Design and Engineering, managed delivery planning and backlog priorities, and personally validated the implemented functionality with QA. Pacing Monitor was released to all eligible customers; the original migrating customer used the released feature.</p>
-</section><section aria-labelledby="product-context"><h2 id="product-context">Product Context</h2>
-<p>MobileAction’s SearchAds product allows advertisers to manage and optimize Apple Ads campaigns. Its reporting tools display metrics such as spend, impressions, taps, installs and acquisition costs. But current performance alone does not answer a forward-looking question: is a set of campaigns progressing fast enough to reach a business target before the monitoring period ends? Consider an advertiser aiming for 10,000 installs in a defined period. Knowing that 6,000 installs have been delivered is informative, but assessing whether performance is on track requires knowing how much of the cycle has elapsed, how the target is distributed over time and what variation from expected progress the business accepts. Pacing monitoring brings these elements together.</p>
-</section><section aria-labelledby="problem-identification"><h2 id="problem-identification">Problem Identification</h2>
-<p>The project began when a customer moving from Skai to MobileAction wanted to preserve a pacing-monitoring workflow it already used. That request exposed a gap between traditional campaign reporting and ongoing assessment of progress against business objectives. Without a dedicated pacing view, an advertiser had to review separate campaign results and evaluate those results against time-bound targets. For teams managing many campaigns, this could increase repetitive checking and make emerging performance deviations harder to recognize quickly. The problem was not a lack of campaign data. It was the effort required to turn that data into a clear assessment of progress and risk.</p>
-</section><section aria-labelledby="customer-discovery"><h2 id="customer-discovery">Customer Discovery</h2>
-<p>I participated directly in customer discovery conversations to understand how the migrating advertiser organized its campaigns, used pacing monitoring, selected business goals and expected to recognize potential issues. We focused on the underlying workflow rather than assuming that matching the previous platform screen for screen would produce the right solution. These conversations informed a product structure organized around monitoring periods, campaign groups, selectable metrics and customer-defined risk ranges. The original customer was an important source of requirements, but the solution needed to function as a reusable platform capability rather than a one-off customer configuration.</p>
-</section><section aria-labelledby="product-opportunity-hypothesis"><h2 id="product-opportunity-hypothesis">Product Opportunity &amp; Hypothesis</h2>
-<p>The migration created an immediate need for feature continuity, but the principal strategic opportunity was broader differentiation. Pacing Monitor could extend MobileAction beyond retrospective reporting toward proactive evaluation of whether performance was on pace to meet goals. Product hypothesis (retrospectively formulated): If advertisers could group campaigns, define targets over business cycles and see meaningful risk signals, they could identify deviations earlier and make more timely optimization decisions with less manual analysis. The feature was positioned inside the existing SearchAds environment. The PRD specified a gated introduction for free accounts with a Contact Sales action; however, this case study makes no claim about pricing, conversion or revenue generated by that positioning.</p>
-</section><section aria-labelledby="evaluating-the-solution"><h2 id="evaluating-the-solution">Evaluating the Solution</h2>
-<p>The key product design challenge was balancing meaningful configuration with a manageable setup flow. Advertisers needed flexibility across campaign groups, metrics, targets and thresholds, but unrestricted options could overwhelm the initial experience. I structured the product into four configuration stages: (1) Naming &amp; Business Cycle, (2) Groups of Campaigns, (3) Performance Metrics and (4) Risk Definition. Each step depended on the relevant prior information: for example, users needed to create campaign groups before configuring metrics, and select metrics before defining their risk thresholds. The approach converted an open-ended monitoring request into a repeatable configuration workflow that could serve advertisers with different business goals.</p>
-</section><section aria-labelledby="mvp-definition"><h2 id="mvp-definition">MVP Definition</h2>
+<header class="pacing-hero"><p class="pacing-eyebrow">PRODUCT STORY 02 · MOBILEACTION</p>
+<h1>From one customer's requirement to a product for many.</h1>
+<p class="pacing-deck">How I helped turn an enterprise advertiser's campaign-monitoring needs into a configurable feature for MobileAction's broader customer base.</p>
+<dl class="pacing-metadata">
+<div>
+<dt>Product</dt>
+<dd>Pacing Monitor</dd>
+</div>
+<div>
+<dt>Company</dt>
+<dd>MobileAction</dd>
+</div>
+<div>
+<dt>Role</dt>
+<dd>Product Manager</dd>
+</div>
+<div>
+<dt>Domain</dt>
+<dd>Enterprise SaaS · Apple Ads campaign management</dd>
+</div>
+<div>
+<dt>Journey</dt>
+<dd>Customer discovery → Product design → Delivery → Release</dd>
+</div>
+</dl>
+<p class="pacing-outcome-spotlight">Released to all eligible customers and adopted by the original enterprise advertiser.</p></header><figure id="pacing-workflow" class="pacing-diagram"><h2>Four decisions, one monitoring workflow.</h2>
+<ol class="pacing-flow" role="list">
+<li>
+<span class="pacing-step-number" aria-hidden="true">01</span><span>Monitoring period</span>
+</li>
+<li>
+<span class="pacing-step-number" aria-hidden="true">02</span><span>Campaign selection</span>
+</li>
+<li>
+<span class="pacing-step-number" aria-hidden="true">03</span><span>KPI targets</span>
+</li>
+<li>
+<span class="pacing-step-number" aria-hidden="true">04</span><span>Risk boundaries</span>
+</li>
+</ol>
+<figcaption>Conceptual workflow based on product requirements — not a released interface screenshot.</figcaption></figure><div id="pacing-images-workflow" class="pacing-verified-images" hidden></div>
+<article class="pacing-narrative" aria-label="Pacing Monitor product story"><section id="starting-point" class="pacing-section" aria-labelledby="starting-point-heading"><div class="pacing-reading">
+<p class="pacing-index">01 · The starting point</p>
+<h2 id="starting-point-heading">A migration requirement revealed a broader product opportunity.</h2>
+<p>An enterprise advertiser preparing to move to MobileAction already relied on a pacing-monitoring workflow. They needed to know whether their advertising campaigns were progressing toward business targets, rather than only looking backward at reported performance.</p>
+<p>Maintaining that capability mattered to their transition. But building a one-off copy of another system would have missed a bigger opportunity: a reusable way for advertisers to define what <em>on track</em> meant for their own campaigns.</p>
+<p>My role was to translate that customer need into a practical, configurable product that could fit MobileAction's existing campaign-management experience.</p>
+</div>
+<div id="pacing-images-starting-point" class="pacing-verified-images" hidden></div></section><section id="discovery" class="pacing-section" aria-labelledby="discovery-heading"><div class="pacing-reading">
+<p class="pacing-index">02 · Discovery and framing</p>
+<h2 id="discovery-heading">The question wasn't just “What does the customer want copied?” It was “What decision do they need to make?”</h2>
+<p>Through direct customer conversations and Customer Success feedback, we explored the monitoring decisions behind the request: which campaigns mattered, which performance indicators defined success, how targets should change over a monitoring period, and what should count as a risk.</p>
+<p>This shifted the product framing from a customer-specific migration feature toward a reusable monitoring capability. It also shaped the MVP: enough flexibility to accommodate different advertiser objectives without creating a separate analytics product.</p>
+<blockquote>Solve for the decision behind the request, not just the workflow being requested.</blockquote>
+</div>
+<div id="pacing-images-discovery" class="pacing-verified-images" hidden></div></section><section id="mvp" class="pacing-section" aria-labelledby="mvp-heading"><div class="pacing-reading">
+<p class="pacing-index">03 · Shaping the MVP</p>
+<h2 id="mvp-heading">From complex configuration to a manageable sequence.</h2>
+<p>I created initial wireframes and worked with a product designer to structure the creation experience around four decisions:</p>
+<ol class="pacing-definition-list">
+<li>
+<strong>Set the monitoring period:</strong> Establish the time window for comparing expected and actual performance.</li>
+<li>
+<strong>Choose campaigns:</strong> Select the advertising activity to monitor.</li>
+<li>
+<strong>Define KPIs and targets:</strong> Specify the performance measures and business goals that matter.</li>
+<li>
+<strong>Set risk boundaries:</strong> Configure the ranges that indicate when performance may need attention.</li>
+</ol>
+<p>The monitoring experience brought current and expected values, pacing information, and risk classifications into a focused dashboard. Where users needed more detailed investigation, the feature linked back into MobileAction's existing Ads Manager rather than duplicating reporting capabilities.</p>
+</div>
+<div id="pacing-images-mvp" class="pacing-verified-images" hidden></div></section><section id="technical-decisions" class="pacing-section" aria-labelledby="technical-decisions-heading"><div class="pacing-reading">
+<p class="pacing-index">04 · Where product decisions became technical decisions</p>
+<h2 id="technical-decisions-heading">A pacing dashboard is only trustworthy if the business logic behind it is right.</h2>
+</div>
+<figure class="pacing-diagram pacing-decisions-diagram"><div class="pacing-decisions">
+<div class="pacing-decision">
+<h3>Decision A — Not every KPI behaves the same way.</h3>
+<dl>
+<dt>Challenge</dt>
+<dd>Some metrics accumulate over time, while others are rates or averages. Applying the same pacing calculation to every metric could create misleading expectations.</dd>
+<dt>Product decision</dt>
+<dd>I documented different metric behaviors and clarified them with Engineering.</dd>
+</dl>
+</div>
+<div class="pacing-decision">
+<h3>Decision B — Attribution can change the meaning of a metric.</h3>
+<dl>
+<dt>Challenge</dt>
+<dd>Certain conversion or cohort metrics depended on attribution settings such as install time versus event time.</dd>
+<dt>Product decision</dt>
+<dd>We needed to account for compatibility, warnings, and conditions under which a setting should be shown, while remaining consistent with existing platform behavior.</dd>
+</dl>
+</div>
+<div class="pacing-decision">
+<h3>Decision C — Monitoring should connect to investigation.</h3>
+<dl>
+<dt>Challenge</dt>
+<dd>Advertisers needed a quick signal that something was off, but also a path to understand why.</dd>
+<dt>Product decision</dt>
+<dd>We reused detailed reporting in Ads Manager, preserving campaign selection when navigating to investigate an issue.</dd>
+</dl>
+</div>
+</div>
+<figcaption>Conceptual technical-decision explanations based on product requirements — not released-product screenshots.</figcaption></figure><div class="pacing-reading"><p class="pacing-insight">Good product design sometimes means defining what a feature should <em>not</em> try to become.</p></div>
+<div id="pacing-images-technical-decisions" class="pacing-verified-images" hidden></div></section><section id="delivery" class="pacing-section" aria-labelledby="delivery-heading"><div class="pacing-reading">
+<p class="pacing-index">05 · From specifications to delivery</p>
+<h2 id="delivery-heading">Making detailed business rules buildable and testable.</h2>
+<p>I prepared a detailed PRD covering the creation, editing, viewing, and overview flows, including KPI behavior, targets, formulas, risk thresholds, attribution dependencies, validation, error handling, and navigation. I managed the backlog and delivery planning, collaborated with Engineering on feasibility and implementation questions, and clarified acceptance criteria where required.</p>
+<p>I also checked implemented journeys against the product requirements and reviewed issues with QA. QA owned formal testing; my focus was ensuring that the business logic and experience we had agreed on were reflected in the released product.</p>
+<p>Customer validation happened through direct sessions and Customer Success feedback, with particular attention to the advertiser whose migration need had started the work.</p>
+</div>
+<figure id="pacing-delivery" class="pacing-diagram"><h2>From customer requirement to release and use.</h2>
+<ol class="pacing-flow" role="list">
+<li>
+<span class="pacing-step-number" aria-hidden="true">01</span><span>Customer requirement</span>
+</li>
+<li>
+<span class="pacing-step-number" aria-hidden="true">02</span><span>Discovery &amp; framing</span>
+</li>
+<li>
+<span class="pacing-step-number" aria-hidden="true">03</span><span>Initial wireframes + PRD</span>
+</li>
+<li>
+<span class="pacing-step-number" aria-hidden="true">04</span><span>Engineering / QA validation</span>
+</li>
+<li>
+<span class="pacing-step-number" aria-hidden="true">05</span><span>Customer feedback</span>
+</li>
+<li>
+<span class="pacing-step-number" aria-hidden="true">06</span><span>Release &amp; use</span>
+</li>
+</ol>
+<figcaption>Conceptual delivery sequence based on the project account — not a released interface screenshot.</figcaption></figure><div id="pacing-images-delivery" class="pacing-verified-images" hidden></div></section><section id="outcomes" class="pacing-section" aria-labelledby="outcomes-heading"><div class="pacing-reading">
+<p class="pacing-index">06 · Release and outcome</p>
+<h2 id="outcomes-heading">From a customer need to a released product capability.</h2>
+<p>Pacing Monitor was released to all eligible MobileAction customers. The original migrating enterprise advertiser adopted and used the feature.</p>
+<p>That is the verified outcome: the customer retained an important monitoring workflow, and MobileAction gained a reusable product capability for a wider customer base.</p>
+<p>No revenue impact, retention improvement, adoption rate, time saved, or specific commercial conversion is claimed for Pacing Monitor because those figures have not been established.</p>
+</div>
+<div class="pacing-verified-outcome">
+<strong>Released to all eligible customers</strong><strong>Adopted by the originating enterprise advertiser</strong><p>Verified release and use · No numerical impact claimed</p>
+</div>
+<div id="pacing-images-outcomes" class="pacing-verified-images" hidden></div></section><section id="reflection" class="pacing-section" aria-labelledby="reflection-heading"><div class="pacing-reading">
+<p class="pacing-index">07 · Looking back</p>
+<h2 id="reflection-heading">The lesson: identify the reusable product within the specific request.</h2>
+<p>This project reinforced the importance of investigating <em>why</em> an enterprise customer needs a feature before choosing <em>what</em> to build. It also deepened my appreciation for the logic beneath analytics interfaces: target calculations, attribution behavior, and risk classification can matter as much as the visual design.</p>
+<p>The result was not simply a replacement for one customer's previous workflow. It was an opportunity to turn a real customer constraint into a focused, configurable feature that fit the existing platform.</p>
+<blockquote>A customer request is a starting point. Product thinking turns it into something useful beyond the original conversation.</blockquote>
+</div>
+<div id="pacing-images-reflection" class="pacing-verified-images" hidden></div></section></article><div class="pacing-reading">
+<details class="pacing-extra-notes"><summary>Additional documented product detail</summary><p>These previously published notes describe product configuration and business logic, not measured customer outcomes. Illustrative calculations are examples, not customer performance data.</p>
+<div class="pacing-note-group">
+<h3>MVP scope, metric calculations, and configurable risk rules</h3>
 <h3>A reusable monitoring model</h3>
 <p>The MVP covered dashboard creation and editing, a detailed dashboard view, and an overview of multiple dashboard cards. A dashboard could monitor one app and campaign-group context, contain up to five named groups of campaigns, and track up to five selected metrics. These limits reflected deliberate MVP scoping and UX simplification rather than a claim that customers would never need more flexibility. Users selected a starting date and business-cycle duration, chose campaigns from the platform’s existing campaign selector, selected relevant performance metrics, and assigned target values per campaign group. Pacing Monitor then evaluated actual results against expected performance and the user's chosen risk boundaries.</p>
 <h3>Expected progress and suggested daily targets</h3>
 <p>As PM, I defined the expected behavior for pacing calculations and collaborated with Engineering to validate feasibility. The PRD distinguished cumulative measures such as spend, impressions and installs from ratio measures such as TTR and conversion rate. For cumulative metrics, Expected Value = (Days Elapsed × Target Value) ÷ Total Cycle Days. For ratio metrics, Expected Value = Target Value. For applicable cumulative metrics, Suggested Daily Target = (Target − Current Value) ÷ Days Remaining. These formulas represented business-level expected behavior; Engineering owned the implementation. For example, if a campaign group had a target of 10,000 installs, had delivered 6,000 and had ten days remaining, the suggested daily target would be 400 installs. This is an illustrative calculation, not a customer outcome.</p>
 <h3>Configurable risk monitoring</h3>
 <p>Risk states were calculated relative to the expected target, using 100% as the reference point. Users could configure moderate- and high-risk thresholds both below and above the target. The PRD provided initial defaults, including below-target moderate risk at under 80% and high risk under 65%, and above-target moderate risk above 120% and high risk above 145%. Threshold controls included synchronized slider handles and numerical inputs, letting users tune risk classifications to the metric and business objective. This mattered because falling short of an install goal and exceeding a spend goal can represent different problems.</p>
-</section><section aria-labelledby="product-trade-offs"><h2 id="product-trade-offs">Product Trade-offs</h2>
+</div>
+<div class="pacing-note-group">
+<h3>Interaction and validation behavior</h3>
+<p>I prepared initial wireframes for the four-stage creation flow and collaborated with a product designer to refine the interface. We aimed to make a technically detailed configuration process understandable by presenting the decisions in a logical order: define the monitoring period, choose the campaigns, specify KPIs and targets, then define risk boundaries. The dashboard view brought the same model into a compact monitoring experience. It showed current and expected values, the ratio between them, suggested daily targets where applicable, and risk classification. The overview surfaced cards for different dashboards, making it easier to see which monitoring areas needed attention. I also specified validation and interaction behavior: required-field guidance, unavailable steps until prerequisites were completed, creation success and failure notifications, unsaved-change confirmation, and appropriate scheduled states for dashboards with future start dates.</p>
+</div>
+<div class="pacing-note-group">
+<h3>Previously documented scope and platform trade-offs</h3>
 <h3>Decision A: Configurability versus usability</h3>
 <p>We limited each dashboard to one app and campaign-group context, up to five monitoring groups and five metrics. The intent was to simplify first-time setup without removing the ability to create multiple dashboards for distinct monitoring needs.</p>
 <h3>Decision B: Standard risk rules versus customer-defined goals</h3>
@@ -49,25 +188,26 @@
 <p>Pacing Monitor was not intended to replicate every campaign reporting view. Instead, users could open relevant campaigns in Ads Manager with filters pre-applied. This linked risk identification to deeper investigation while reusing existing reporting capabilities.</p>
 <h3>Decision D: Independent attribution versus platform consistency</h3>
 <p>Rather than invent separate attribution rules for Pacing Monitor, we reused established platform settings and documented their dependencies. The PRD described when attribution options should appear, how conflicting metric types should be handled and what warnings users should see when changing attribution mode.</p>
-</section><section aria-labelledby="product-design-user-experience"><h2 id="product-design-user-experience">Product Design &amp; User Experience</h2>
-<p>I prepared initial wireframes for the four-stage creation flow and collaborated with a product designer to refine the interface. We aimed to make a technically detailed configuration process understandable by presenting the decisions in a logical order: define the monitoring period, choose the campaigns, specify KPIs and targets, then define risk boundaries. The dashboard view brought the same model into a compact monitoring experience. It showed current and expected values, the ratio between them, suggested daily targets where applicable, and risk classification. The overview surfaced cards for different dashboards, making it easier to see which monitoring areas needed attention. I also specified validation and interaction behavior: required-field guidance, unavailable steps until prerequisites were completed, creation success and failure notifications, unsaved-change confirmation, and appropriate scheduled states for dashboards with future start dates.</p>
-</section><section aria-labelledby="technical-considerations"><h2 id="technical-considerations">Technical Considerations</h2>
+</div>
+<div class="pacing-note-group">
+<h3>Calculation, attribution, and reporting dependencies</h3>
 <h3>Different calculation semantics</h3>
 <p>Pacing formulas had to respect whether a metric accumulated over time or represented a rate or average. Treating all metrics as cumulative would have produced misleading expected values. I documented the distinctions and confirmed feasibility with Engineering.</p>
 <h3>Attribution-dependent metrics</h3>
 <p>Some conversion and cohort metrics depended on attribution settings such as install time versus event time. The PRD defined conditions for displaying settings and warning users when a change affected selected metric compatibility. The solution reused the platform's existing attribution behavior to preserve consistency.</p>
 <h3>Monitoring-to-reporting navigation</h3>
 <p>The feature needed to preserve context when navigating back to detailed reporting. I specified links to Ads Manager with selected campaign filters already applied, allowing users to investigate an issue without recreating their campaign selection manually.</p>
-</section><section aria-labelledby="from-requirements-to-delivery"><h2 id="from-requirements-to-delivery">From Requirements to Delivery</h2>
-<p>I created the detailed Product Requirements Document describing creation, editing, viewing and overview flows; metric and target rules; formulas; risk thresholds; attribution dependencies; navigation; validation and error handling. I managed backlog and delivery planning, worked with Engineering on feasibility and implementation questions, and clarified acceptance criteria when ambiguity emerged. I also personally validated implemented flows against the product requirements and reviewed issues with QA, while QA retained responsibility for formal testing. This allowed me to check that the business logic and intended user journey were reflected consistently in the implemented product.</p>
-</section><section aria-labelledby="customer-validation-release"><h2 id="customer-validation-release">Customer Validation &amp; Release</h2>
-<p>We validated the experience through direct customer sessions and feedback gathered by Customer Success, alongside internal functional checks. The original migrating advertiser provided a relevant reference point because it already depended on a pacing-monitoring workflow. Pacing Monitor was implemented and released to all eligible MobileAction customers. The original migrating customer adopted and used the released feature. We have not established a formal beta timeline or specific post-release enhancements, so this account does not claim either.</p>
-</section><section aria-labelledby="outcomes"><h2 id="outcomes">Outcomes</h2>
-<p>The most concrete customer outcome was workflow continuity: the migrating customer used Pacing Monitor after release. At the product level, a customer-triggered requirement became a reusable capability available to the wider eligible customer base. Pacing Monitor expanded MobileAction’s campaign-management offering from reporting performance toward evaluating progress against time-bound targets and configurable risk thresholds. This aligned with the broader differentiation objective. No specific revenue, retention, migration-deal, productivity or adoption-percentage impact is claimed because those figures have not been verified.</p>
-</section><section aria-labelledby="reflection"><h2 id="reflection">Reflection</h2>
-<p>This project reinforced the importance of understanding the business objective behind a feature request instead of simply copying an existing solution. Although the work began with a migration requirement, we needed to consider how the capability would serve a much broader customer base. It also developed my experience defining business logic in data-driven products: cumulative and ratio metrics required different calculations, attribution settings created dependencies, and risk thresholds needed flexibility to reflect different objectives. Reusing the platform’s existing Ads Manager and attribution capabilities helped keep the new product focused. The project showed how direct discovery, deliberate MVP scoping and cross-functional delivery can turn a customer-specific need into a reusable product feature.</p>
-</section></article>
-<footer class="case-return"><a href="../">← Back to Projects</a><a href="../../#projects-heading">Back to Home</a></footer>
-</main>
+</div>
+<div class="pacing-note-group">
+<h3>Retrospective product hypothesis and positioning</h3>
+<p>The migration created an immediate need for feature continuity, but the principal strategic opportunity was broader differentiation. Pacing Monitor could extend MobileAction beyond retrospective reporting toward proactive evaluation of whether performance was on pace to meet goals. Product hypothesis (retrospectively formulated): If advertisers could group campaigns, define targets over business cycles and see meaningful risk signals, they could identify deviations earlier and make more timely optimization decisions with less manual analysis. The feature was positioned inside the existing SearchAds environment. The PRD specified a gated introduction for free accounts with a Contact Sales action; however, this case study makes no claim about pricing, conversion or revenue generated by that positioning.</p>
+</div>
+<div class="pacing-note-group">
+<h3>Product context and illustrative calculation</h3>
+<p>MobileAction’s SearchAds product allows advertisers to manage and optimize Apple Ads campaigns. Its reporting tools display metrics such as spend, impressions, taps, installs and acquisition costs. But current performance alone does not answer a forward-looking question: is a set of campaigns progressing fast enough to reach a business target before the monitoring period ends? Consider an advertiser aiming for 10,000 installs in a defined period. Knowing that 6,000 installs have been delivered is informative, but assessing whether performance is on track requires knowing how much of the cycle has elapsed, how the target is distributed over time and what variation from expected progress the business accepts. Pacing monitoring brings these elements together.</p>
+</div></details><aside class="pacing-evidence" aria-labelledby="pacing-evidence-heading"><h2 id="pacing-evidence-heading">Evidence and disclosure</h2>
+<p>This is a retrospective account of Pegah's work on Pacing Monitor at MobileAction. Public or authorized screenshots of the released feature are currently unavailable. Diagrams on this page are original, simplified explanations based on the documented product requirements and are <strong>not</strong> screenshots of the released interface. Confidential customer details, internal PRDs, and internal wireframes are not reproduced.</p></aside>
+</div>
+<footer class="pacing-return"><a href="../">← Back to Projects</a><a href="../../#projects-heading">Back to Home</a></footer></main>
 </body>
 </html>
