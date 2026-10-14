@@ -79,4 +79,4 @@ export function createGalleryCard(project) {
 }
 
 const gallery = document.querySelector("#projects-gallery");
-if (gallery) gallery.replaceChildren(...galleryProjects.filter(project => project.slug === "pacing-monitor").map(createGalleryCard));
+if (gallery) gallery.replaceChildren(...galleryProjects.map(createGalleryCard));
