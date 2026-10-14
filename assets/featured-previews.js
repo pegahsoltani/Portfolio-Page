@@ -1,5 +1,6 @@
 import { projectCardData, createSkillTags } from "./project-card.js";
 import { createProjectCarousel } from "./project-carousel.js";
+import { galleryProjects } from "./projects-gallery.js";
 
 // Approved V1 copy for Home previews; project routes and titles stay shared.
 const previews = {
@@ -19,6 +20,11 @@ const previews = {
     outcome: "Delivered for the largest enterprise customer",
     context: "Pacing Monitor was delivered, enabled, and used by MobileAction's largest enterprise customer. Access was limited to this customer.",
     ...projectCardData["pacing-monitor"],
+  },
+  "kiddiedesk": {
+    ...galleryProjects.find(project => project.slug === "kiddiedesk"),
+    outcome: "MVP in use at one school",
+    context: "The MVP is in use at a school, with further rollout planned.",
   },
 };
 
