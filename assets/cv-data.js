@@ -42,10 +42,10 @@ export const experience = [
     "dates": "Apr 2025 – Mar 2026",
     "employer": "MobileAction (Apple Ads)",
     "description": "B2B SaaS platform for Apple Ads campaign management and optimisation.",
-    "highlight": "Delivered CPP A/B Testing and Pacing Monitor from discovery toward launch, working through experimentation and campaign-monitoring requirements.",
+    "highlight": "Delivered CPP A/B Testing and Pacing Monitor from discovery toward launch, working through experimentation and campaign-monitoring requirements. Pacing Monitor was delivered, enabled, and used only by the company's largest enterprise customer.",
     "details": [
       "Delivered a first-to-market Product Page A/B Testing capability for Apple Ads, turning a recurring manual workflow into a statistically validated product in partnership with Data Science and improving TTR and installs by approximately 10%.",
-      "Delivered an enterprise Pacing Monitor from discovery to launch, defining configurable KPI targets, pacing logic, and risk thresholds for multi-campaign monitoring.",
+      "Led Pacing Monitor from discovery through enterprise delivery for the company's largest enterprise customer, defining configurable KPI targets, pacing logic, and risk thresholds for multi-campaign monitoring.",
       "Scaled a customer pain point into Scheduled Budget Allocation, enabling advertisers to automate budget changes around seasonal and high-demand periods, with strong adoption after release.",
       "Contributed to a seven-figure enterprise agreement by coordinating customer-committed product requirements across Product, Engineering, Sales, and Customer Success during a strategic PoC.",
       "Shaped roadmap and technical product decisions through advertiser-account and usage analysis, weekly customer interviews, support signals, competitor research, and collaboration on Apple Ads API, bidding, automation, and experimentation trade-offs."

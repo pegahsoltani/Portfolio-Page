@@ -15,9 +15,9 @@ const previews = {
   "pacing-monitor": {
     category: "MobileAction · Enterprise SaaS · Campaign Monitoring",
     headline: "Turning an enterprise requirement into a reusable monitoring feature.",
-    description: "An enterprise advertiser moving to our platform needed a reliable way to see whether campaigns were on track against their targets. I helped turn that specific need into a configurable product capability, from customer discovery and initial wireframes to requirements, technical trade-offs, and delivery with Engineering and QA.",
-    outcome: "From one customer's need to a wider product capability",
-    context: "Pacing Monitor was released to all eligible customers, and the original enterprise customer adopted and used it.",
+    description: "MobileAction's largest enterprise customer moving to our platform needed a reliable way to see whether campaigns were on track against their targets. I helped turn that specific need into a configurable product capability, from customer discovery and initial wireframes to requirements, technical trade-offs, and delivery with Engineering and QA.",
+    outcome: "Delivered for the largest enterprise customer",
+    context: "Pacing Monitor was delivered, enabled, and used by MobileAction's largest enterprise customer. Access was limited to this customer.",
     ...projectCardData["pacing-monitor"],
   },
 };

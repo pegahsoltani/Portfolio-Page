@@ -17,8 +17,8 @@ export const galleryProjects = [
     title: "Pacing Monitor",
     category: "MobileAction · Enterprise SaaS · Campaign Management",
     headline: "Turning an enterprise requirement into a reusable monitoring feature.",
-    description: "An enterprise customer needed to understand whether advertising campaigns were progressing toward their targets. I translated that requirement into a broader product capability, shaping the user experience, configurable KPI logic, risk thresholds, and delivery requirements.",
-    outcome: "Released to all eligible customers and adopted by the original enterprise customer.",
+    description: "MobileAction's largest enterprise customer needed to understand whether advertising campaigns were progressing toward their targets. I translated that requirement into a reusable product capability, shaping the user experience, configurable KPI logic, risk thresholds, and delivery requirements.",
+    outcome: "Delivered, enabled, and used by MobileAction's largest enterprise customer, with access limited to that customer.",
     ...projectCardData["pacing-monitor"],
   },
   {
