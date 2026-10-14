@@ -5,6 +5,10 @@
 .gallery-header h1 { color: var(--gallery-heading); font-size: clamp(32px, 3.4vw, 46px); font-weight: 600; margin-bottom: 18px; }
 .gallery-header .gallery-intro { color: var(--gallery-body); font-size: 19px; line-height: 1.7; margin: 0; }
 .gallery-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+/* Center a sole listed project at the existing desktop card width. */
+@media (min-width: 801px) {
+  .gallery-grid:has(> .gallery-card:only-child) { grid-template-columns: minmax(0, calc((100% - 24px) / 2)); justify-content: center; }
+}
 .gallery-card { --gallery-accent: var(--color-silver); --gallery-ink: var(--color-slate); min-width: 0; display: flex; flex-direction: column; overflow: hidden; background: var(--color-white); border: 1px solid var(--color-silver); border-radius: 14px; }
 .gallery-media { text-decoration: none; }
 .gallery-screenshot { border-radius: 6px; }
