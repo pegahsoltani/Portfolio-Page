@@ -29,6 +29,7 @@ export const galleryProjects = [
     description: "KiddieDesk brings preschool administration, daily care records, and parent communication into a shared, multi-role SaaS platform. I led product discovery and MVP definition, validated an AI-assisted prototype with the customer, defined a subscription model, and coordinated design and engineering delivery.",
     outcome: "The MVP is in use at a school, with further rollout planned.",
     ...projectCardData["kiddiedesk"],
+    image: { src: new URL("./kiddiedesk/school-panel-overview.png", import.meta.url).href, alt: "Illustrative KiddieDesk interface concept — school overview with representative demo data", width: 1536, height: 1024 },
   },
 ];
 
