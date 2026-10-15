@@ -5,13 +5,15 @@ import { galleryProjects } from "./projects-gallery.js";
 // Approved V1 copy for Home previews; project routes and titles stay shared.
 const previews = {
   "cpp-ab-testing": {
-    category: "MobileAction · AdTech · Experimentation",
-    headline: "Helping advertisers make evidence-based creative decisions.",
-    description: "Advertisers had multiple Custom Product Pages to choose from, but intuition and manual comparisons did not provide a reliably isolated testing environment. I led the product journey from customer discovery through beta and public release, collaborating with Data Science and Engineering to make experiments statistically sound and practical to use.",
-    outcome: "15–20% higher observed tap-through rates (TTR)",
-    context: "Two enterprise customers completed experiments, applied the results to their creative decisions, and subsequently observed higher TTR compared with previous seasonal periods. This is an observational comparison, not a controlled estimate of the feature's causal impact.",
+    title: "A/B Testing for Apple Ads Creative Pages\n(CPP A/B Testing)",
+    category: "B2B SaaS · AdTech · Experimentation",
+    headline: "Helping advertisers choose winning creative variants with real data.",
+    description: "Advertisers needed a reliable way to compare different App Store creative pages before using them in campaigns. I led the product from customer discovery through beta and public release, working with Data Science and Engineering to turn a manual, unreliable process into a structured A/B testing experience.",
+    outcome: "Two enterprise customers applied the winning test results and later saw 15–20% higher ad engagement.",
+    context: "Results were based on before/after customer performance, not a controlled causal study.",
     ...projectCardData["cpp-ab-testing"],
-    caption: "Illustrative project visual · MobileAction blog asset",
+    tags: ["#ProductDiscovery", "#Experimentation", "#ProductRequirements", "#BetaToLaunch", "#DataScienceCollaboration"],
+    caption: "CPP A/B Testing — product visual",
   },
   "pacing-monitor": {
     category: "MobileAction · Enterprise SaaS · Campaign Monitoring",
@@ -51,7 +53,7 @@ export function renderFeaturedProjects(container, slugs, projects) {
     const story = element("article", "featured-story");
     story.dataset.project = slug;
     const copy = element("div", "featured-copy");
-    const title = element("h3", "featured-title", project.title);
+    const title = element("h3", "featured-title", preview.title || project.title);
     title.id = `featured-${slug}`;
     story.setAttribute("aria-labelledby", title.id);
     const outcome = element("div", "featured-outcome");
