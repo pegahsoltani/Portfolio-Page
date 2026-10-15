@@ -25,8 +25,11 @@ const previews = {
   },
   "kiddiedesk": {
     ...galleryProjects.find(project => project.slug === "kiddiedesk"),
-    outcome: "MVP in use at one school",
-    context: "The MVP is in use at a school, with further rollout planned.",
+    category: "Education Technology · Preschool SaaS · Product Development",
+    description: "I led the product from discovery to release, working directly with teachers, administrators, and parents to understand their daily workflows and validate the problems worth solving. I translated those insights into product and technical specifications, created an interactive prototype to validate flows and UX, divided the work into phased deliverables, and led the product through design, development, validation, and release.",
+    tags: ["#ProductDiscovery", "#UserResearch", "#MVPDefinition", "#CrossFunctionalDelivery", "#ReleaseManagement"],
+    outcome: "MVP released and actively used by a school",
+    context: "The first version is now in real-world use, with expansion to additional schools planned.",
   },
 };
 
