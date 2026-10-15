@@ -4,31 +4,37 @@ import { projectCardData, createSkillTags } from "./project-card.js";
 export const galleryProjects = [
   {
     slug: "cpp-ab-testing",
-    title: "CPP A/B Testing",
-    category: "MobileAction · AdTech · Experimentation",
-    headline: "Helping advertisers make evidence-based creative decisions.",
-    description: "Advertisers needed a reliable way to compare Custom Product Pages without relying on intuition or manual testing under non-isolated conditions. I led the product from discovery through beta and public release, collaborating with Data Science and Engineering to make experimentation reliable and practical.",
-    outcome: "Two enterprise customers applied their test findings and subsequently observed 15–20% higher tap-through rates compared with previous seasonal periods.",
-    qualification: "This is an observational comparison, not a controlled estimate of the feature's causal impact.",
+    title: "A/B Testing for Apple Ads Creative Pages",
+    officialName: "(CPP A/B Testing)",
+    linkLabel: "CPP A/B Testing",
+    category: "B2B SaaS · AdTech · Experimentation",
+    headline: "Helping advertisers choose winning creative variants with real data.",
+    description: "Advertisers needed a reliable way to compare different App Store creative pages before using them in campaigns. I led the product from customer discovery through beta and public release, working with Data Science and Engineering to turn a manual, unreliable process into a structured A/B testing experience.",
+    outcome: "Two enterprise customers applied the winning test results and later saw 15–20% higher ad engagement.",
     ...projectCardData["cpp-ab-testing"],
+    tags: ["#ProductDiscovery", "#Experimentation", "#ProductRequirements", "#BetaToLaunch", "#DataScienceCollaboration"],
   },
   {
     slug: "pacing-monitor",
     title: "Pacing Monitor",
-    category: "MobileAction · Enterprise SaaS · Campaign Management",
-    headline: "Turning an enterprise requirement into a reusable monitoring feature.",
-    description: "MobileAction's largest enterprise customer needed to understand whether advertising campaigns were progressing toward their targets. I translated that requirement into a reusable product capability, shaping the user experience, configurable KPI logic, risk thresholds, and delivery requirements.",
-    outcome: "Delivered, enabled, and used by MobileAction's largest enterprise customer, with access limited to that customer.",
+    category: "Enterprise SaaS · AdTech · Campaign Monitoring",
+    headline: "Turning a critical enterprise migration requirement into a delivered product capability.",
+    description: "A large enterprise customer migrating to MobileAction needed a familiar way to monitor campaign health and budget pacing. I worked directly with the customer and Customer Success, translated the requirement into detailed product specifications, and owned delivery from discovery and planning through sprint execution, validation, and release.",
+    outcome: "Delivered for a key enterprise migration",
+    outcomeContext: "Released and adopted by the migrating enterprise customer as an important capability for their move to the platform.",
     ...projectCardData["pacing-monitor"],
+    tags: ["#EnterpriseProduct", "#CustomerDiscovery", "#ProductRequirements", "#TechnicalTradeoffs", "#ReleaseManagement"],
   },
   {
     slug: "kiddiedesk",
     title: "KiddieDesk",
-    category: "VenusSoft · Preschool SaaS · Product Development",
+    category: "Education Technology · Preschool SaaS · Product Development",
     headline: "Bringing preschool operations and parent communication together.",
-    description: "KiddieDesk brings preschool administration, daily care records, and parent communication into a shared, multi-role SaaS platform. I led product discovery and MVP definition, validated an AI-assisted prototype with the customer, defined a subscription model, and coordinated design and engineering delivery.",
-    outcome: "The MVP is in use at a school, with further rollout planned.",
+    description: "I led the product from discovery to release, working directly with teachers, administrators, and parents to understand workflows and validate problems. I translated those insights into product and technical specifications, created an interactive prototype to validate flows and UX, and led phased delivery through design, development, validation, and release.",
+    outcome: "MVP released and actively used by a school",
+    outcomeContext: "The first version is now in real-world use, with expansion to additional schools planned.",
     ...projectCardData["kiddiedesk"],
+    tags: ["#ProductDiscovery", "#UserResearch", "#MVPDefinition", "#CrossFunctionalDelivery", "#ReleaseManagement"],
     image: { src: new URL("./kiddiedesk/school-panel-overview.png", import.meta.url).href, alt: "Illustrative KiddieDesk interface concept — school overview with representative demo data", width: 1536, height: 1024 },
   },
 ];
@@ -50,9 +56,10 @@ export function createGalleryCard(project) {
   const card = element("article", "gallery-card");
   card.dataset.project = project.slug;
   const href = `${project.slug}/`;
+  const linkLabel = project.linkLabel || project.title;
   const media = element("a", "gallery-media project-card-media");
   media.href = href;
-  media.setAttribute("aria-label", `View ${project.title} project image and details`);
+  media.setAttribute("aria-label", `View ${linkLabel} project image and details`);
   if (project.image) {
     const image = element("img", "gallery-screenshot project-card-image");
     Object.assign(image, { loading: "lazy", decoding: "async" }, project.image);
@@ -60,19 +67,22 @@ export function createGalleryCard(project) {
     media.append(image);
   } else media.append(placeholder(project));
   const copy = element("div", "gallery-copy");
+  const titleGroup = element("div", "gallery-title-group");
   const title = element("h2", "gallery-title");
   title.id = `gallery-${project.slug}`;
   const titleLink = element("a", "", project.title);
   titleLink.href = href;
   title.append(titleLink);
+  titleGroup.append(title);
+  if (project.officialName) titleGroup.append(element("p", "gallery-official-name", project.officialName));
   card.setAttribute("aria-labelledby", title.id);
   const outcome = element("div", "gallery-evidence");
   outcome.append(element("p", "gallery-outcome", project.outcome));
-  if (project.qualification) outcome.append(element("p", "gallery-qualification", project.qualification));
+  if (project.outcomeContext) outcome.append(element("p", "gallery-qualification", project.outcomeContext));
   const cta = element("a", "gallery-cta", "View project →");
   cta.href = href;
-  cta.setAttribute("aria-label", `View ${project.title} project`);
-  copy.append(element("p", "gallery-category", project.category), title,
+  cta.setAttribute("aria-label", `View ${linkLabel} project`);
+  copy.append(element("p", "gallery-category", project.category), titleGroup,
     element("p", "gallery-headline", project.headline), element("p", "gallery-description", project.description), createSkillTags(project.tags), outcome, cta);
   card.append(media, copy);
   return card;
