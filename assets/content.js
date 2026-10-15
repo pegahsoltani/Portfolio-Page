@@ -7,8 +7,8 @@ export const profile = {
   greeting: "Hi, I'm Pegah! 👋",
   headline: "Technical Product Manager bridging engineering, customers, and business.",
   introduction: [
-    "Computer Engineering background with 5+ years of experience owning products end to end — from customer discovery and technical requirements to delivery, release, and iteration.",
-    "I’ve worked across different product environments, partnering directly with enterprise customers and translating between technical teams and business stakeholders.",
+    "Computer Engineering background with 5+ years of experience owning products end to end — from discovery and technical requirements to delivery, release, and validation.",
+    "I’ve worked across B2B SaaS and AdTech, collaborated directly with enterprise customers including Google, and owned product delivery within an official Apple Ads partner platform.",
   ],
   primaryCta: { label: "Explore My Work", href: "projects/" },
   secondaryCta: { label: "Get in Touch" },
