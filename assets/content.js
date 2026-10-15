@@ -22,17 +22,17 @@ export const profile = {
 
 export const home = {
   aboutLabel: "A LITTLE ABOUT ME",
-  aboutHeadline: "Finding the human side of technology.",
+  aboutHeadline: "Making complex things easier to understand.",
   about: [
-    "My background in Computer Engineering and over five years in product management has shaped the way I approach problems: stay curious, understand the people involved, and find practical ways to turn complexity into something useful.",
+    "I’ve always been comfortable moving between technical detail and human conversation. Whether I’m discussing constraints with engineers, explaining a decision to a customer, or entering a completely new domain, I try to make things clear, practical, and easy to follow.",
   ],
-  aboutPeopleTitle: "People first",
-  aboutPeopleDescription: "Teaching English helped me develop the listening, communication, and adaptability skills I still use today.",
-  aboutConnectingTitle: "Connecting the dots",
-  aboutConnectingDescription: "I enjoy exploring customer needs, technical possibilities, and trade-offs with cross-functional teams to build useful products.",
-  aboutExploringTitle: "Always exploring",
-  aboutExploringDescription: "Currently learning more about AI products, agentic workflows, and how emerging technologies can solve real problems.",
-  aboutClosing: "Good product management, to me, starts with curiosity about people and the discipline to turn what we learn into better decisions.",
+  aboutPeopleTitle: "Making complexity clear",
+  aboutPeopleDescription: "While studying Computer Engineering, I also taught English to business owners from different backgrounds. That experience strengthened my ability to listen carefully, explain the same idea in different ways, and adapt my communication to the person in front of me — skills I now use constantly when working with engineers, customers, and stakeholders.",
+  aboutConnectingTitle: "Detailed enough to build from",
+  aboutConnectingDescription: "I care a lot about clarity in product specifications. I work closely with engineers to understand constraints, question assumptions, and make sure requirements are realistic enough to build from — not just polished on paper.",
+  aboutExploringTitle: "I ask a lot of questions",
+  aboutExploringDescription: "When I enter a new domain, I start by understanding how the teams work, who the customers are, what the company is prioritising, and what problem the product is really solving. Then I go through the product myself, ask questions freely, and build context before making decisions.",
+  aboutClosing: "Good product work starts when everyone — customer, engineer, and stakeholder — can understand the problem the same way.",
   dublinLabel: "A NEW CHAPTER · DUBLIN, IRELAND",
   dublinHeadline: "Making Dublin feel like home, one adventure at a time.",
   dublin: [
