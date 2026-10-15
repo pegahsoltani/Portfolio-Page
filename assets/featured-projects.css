@@ -31,6 +31,11 @@
 }
 
 .project-carousel { min-width: 0; }
+.carousel-tabs { display: flex; gap: 24px; overflow-x: auto; min-width: 0; margin-bottom: 28px; border-bottom: 1px solid var(--color-border); }
+.carousel-tab { flex: 0 0 auto; min-height: 44px; padding: 12px 2px; border: 0; border-bottom: 3px solid transparent; background: transparent; color: var(--color-midnight); font: inherit; font-size: 16px; white-space: nowrap; cursor: pointer; }
+.carousel-tab[aria-selected="true"] { color: var(--color-slate); border-bottom-color: var(--color-slate); font-weight: 500; }
+.carousel-tab:hover { color: var(--color-slate); }
+.carousel-tab:focus-visible { outline: 3px solid var(--color-slate); outline-offset: -3px; }
 .carousel-viewport { overflow: hidden; touch-action: pan-y pinch-zoom; border-radius: 6px; }
 .carousel-track { display: flex; align-items: stretch; transition: transform 350ms ease; }
 .carousel-slide { flex: 0 0 100%; min-width: 0; }

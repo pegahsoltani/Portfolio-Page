@@ -80,5 +80,5 @@ export function renderFeaturedProjects(container, slugs, projects) {
     story.append(copy, visual);
     return story;
   });
-  createProjectCarousel(container, stories);
+  createProjectCarousel(container, stories, slugs.map(slug => projects.find(project => project.slug === slug).title));
 }

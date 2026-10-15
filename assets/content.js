@@ -49,5 +49,5 @@ export const home = {
     dancing2: { src: "assets/Dancing2.jpeg", alt: "Salsa dancing with friends", width: 945, height: 2048 },
     dancing1: { src: "assets/Dancing1.jpeg", alt: "A group photo with the dance community", width: 2048, height: 1536 },
   },
-  featuredProjects: ["cpp-ab-testing", "kiddiedesk"],
+  featuredProjects: ["cpp-ab-testing", "kiddiedesk", "pacing-monitor"],
 };

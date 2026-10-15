@@ -1,5 +1,5 @@
 // Dependency-free carousel. Any array of already-rendered project slides can be used.
-export function createProjectCarousel(container, slides) {
+export function createProjectCarousel(container, slides, tabLabels = []) {
   const root = document.createElement("div");
   root.className = "project-carousel";
   root.setAttribute("role", "region");
@@ -23,6 +23,21 @@ export function createProjectCarousel(container, slides) {
   };
   const previous = button("Previous project", "←");
   const next = button("Next project", "→");
+  const tabList = document.createElement("div");
+  tabList.className = "carousel-tabs";
+  tabList.setAttribute("role", "tablist");
+  tabList.setAttribute("aria-label", "Featured project selection");
+  const tabs = slides.map((slide, index) => {
+    const label = tabLabels[index] || slide.querySelector("h3")?.textContent || `Project ${index + 1}`;
+    const tab = button(label, label);
+    tab.className = "carousel-tab";
+    tab.id = `${container.id || "project-carousel"}-tab-${index + 1}`;
+    tab.setAttribute("role", "tab");
+    slide.id ||= `${container.id || "project-carousel"}-panel-${index + 1}`;
+    tab.setAttribute("aria-controls", slide.id);
+    tab.addEventListener("click", () => goTo(index));
+    return tab;
+  });
   const dots = document.createElement("div");
   dots.className = "carousel-dots";
   dots.setAttribute("role", "group");
@@ -35,9 +50,9 @@ export function createProjectCarousel(container, slides) {
   const indicators = slides.map((slide, index) => {
     const title = slide.querySelector("h3")?.textContent || `Project ${index + 1}`;
     slide.classList.add("carousel-slide");
-    slide.setAttribute("role", "group");
+    slide.setAttribute("role", "tabpanel");
     slide.setAttribute("aria-roledescription", "slide");
-    slide.removeAttribute("aria-labelledby");
+    slide.setAttribute("aria-labelledby", tabs[index].id);
     slide.setAttribute("aria-label", `${index + 1} of ${slides.length}: ${title}`);
     const indicator = button(`Show project ${index + 1}: ${title}`, "");
     indicator.className = "carousel-dot";
@@ -53,6 +68,8 @@ export function createProjectCarousel(container, slides) {
       if (i !== active && slide.contains(document.activeElement)) viewport.focus({ preventScroll: true });
       slide.inert = i !== active;
       slide.setAttribute("aria-hidden", String(i !== active));
+      tabs[i].setAttribute("aria-selected", String(i === active));
+      tabs[i].tabIndex = i === active ? 0 : -1;
       if (i === active) indicators[i].setAttribute("aria-current", "true");
       else indicators[i].removeAttribute("aria-current");
     });
@@ -61,6 +78,13 @@ export function createProjectCarousel(container, slides) {
     status.textContent = slides.length ? `Project ${active + 1} of ${slides.length}: ${slides[active].querySelector("h3")?.textContent || ""}` : "No featured projects yet.";
     if (document.activeElement === previous && previous.disabled) next.focus({ preventScroll: true });
     if (document.activeElement === next && next.disabled) previous.focus({ preventScroll: true });
+    if (tabs[active]) {
+      // Reveal the active tab horizontally without scrolling the page vertically.
+      const tabBounds = tabs[active].getBoundingClientRect();
+      const listBounds = tabList.getBoundingClientRect();
+      if (tabBounds.left < listBounds.left) tabList.scrollLeft += tabBounds.left - listBounds.left;
+      else if (tabBounds.right > listBounds.right) tabList.scrollLeft += tabBounds.right - listBounds.right;
+    }
   }
 
   previous.addEventListener("click", () => goTo(active - 1));
@@ -71,6 +95,7 @@ export function createProjectCarousel(container, slides) {
     if (Object.hasOwn(destinations, event.key)) {
       event.preventDefault();
       goTo(destinations[event.key]);
+      if (event.target.closest(".carousel-tab")) tabs[active].focus({ preventScroll: true });
     }
   });
 
@@ -117,7 +142,9 @@ export function createProjectCarousel(container, slides) {
   dots.append(...indicators);
   navigation.append(previous, dots, next);
   navigation.hidden = slides.length < 2;
-  root.append(viewport, navigation, status);
+  tabList.append(...tabs);
+  tabList.hidden = slides.length === 0;
+  root.append(tabList, viewport, navigation, status);
   container.replaceChildren(root);
   if (slides.length) goTo(0);
   else {
