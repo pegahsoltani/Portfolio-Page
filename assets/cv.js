@@ -21,7 +21,12 @@ export function renderExperienceEntry(role) {
   const details = element("div", "cv-role-details");
   details.id = `cv-details-${role.id}`;
   const bullets = element("ul", "cv-role-bullets");
-  bullets.append(...role.details.map(text => element("li", "", text)));
+  bullets.append(...role.details.map(detail => {
+    if (typeof detail === "string") return element("li", "", detail);
+    const bullet = element("li");
+    bullet.append(element("strong", "", `${detail.label} — `), document.createTextNode(detail.text));
+    return bullet;
+  }));
   details.append(bullets);
   if (role.relatedProjects?.length) {
     const links = element("div", "cv-related-links");
@@ -54,7 +59,8 @@ const page = document.querySelector(".cv-page");
 if (page) {
   page.querySelector("#cv-achievement-cards").replaceChildren(...achievements.map(achievement => {
     const card = element("article", "cv-achievement");
-    card.append(element("h3", "", achievement.title), element("p", "", achievement.description));
+    card.append(element("h3", "", achievement.title),
+      element("p", "", achievement.supportingHeadline), element("p", "", achievement.description));
     return card;
   }));
   page.querySelector("#cv-role-list").replaceChildren(...experience.map(renderExperienceEntry));
