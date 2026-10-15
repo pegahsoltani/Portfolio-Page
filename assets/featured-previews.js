@@ -16,12 +16,13 @@ const previews = {
     caption: "CPP A/B Testing — product visual",
   },
   "pacing-monitor": {
-    category: "MobileAction · Enterprise SaaS · Campaign Monitoring",
-    headline: "Turning an enterprise requirement into a reusable monitoring feature.",
-    description: "MobileAction's largest enterprise customer moving to our platform needed a reliable way to see whether campaigns were on track against their targets. I helped turn that specific need into a configurable product capability, from customer discovery and initial wireframes to requirements, technical trade-offs, and delivery with Engineering and QA.",
-    outcome: "Delivered for the largest enterprise customer",
-    context: "Pacing Monitor was delivered, enabled, and used by MobileAction's largest enterprise customer. Access was limited to this customer.",
+    category: "Enterprise SaaS · AdTech · Campaign Monitoring",
+    headline: "Turning a critical enterprise migration requirement into a delivered product capability.",
+    description: "A large enterprise customer migrating to MobileAction needed a familiar way to monitor campaign health and budget pacing. I worked directly with the customer and Customer Success to understand the requirement, translated it into detailed product specifications, and owned the delivery from discovery and planning through sprint execution, validation, and release. The feature gave campaign managers a quick view of four key campaign KPIs, with configurable goals and risk zones to show whether each metric was pacing toward target.",
+    outcome: "Delivered for a key enterprise migration",
+    context: "Pacing Monitor was released and adopted by the migrating enterprise customer as an important capability for their move to the platform. Access remained limited to this customer rather than becoming a public release.",
     ...projectCardData["pacing-monitor"],
+    tags: ["#EnterpriseProduct", "#CustomerDiscovery", "#ProductRequirements", "#TechnicalTradeoffs", "#ReleaseManagement"],
   },
   "kiddiedesk": {
     ...galleryProjects.find(project => project.slug === "kiddiedesk"),
