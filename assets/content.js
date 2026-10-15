@@ -4,7 +4,7 @@ export const profile = {
   title: "Technical Product Manager",
   location: "Dublin, Ireland",
   greeting: "Hi, I'm Pegah! 👋",
-  headline: "Curious by nature. Product Manager by profession.",
+  headline: "Technical Product Manager bridging engineering, customers, and business.",
   introduction: [
     "I love asking questions, untangling complex problems, and working with people to turn ideas into products that make a difference.",
     "With a background in Computer Engineering and 5+ years in product management, I bring technical thinking, creativity, and a human perspective to the products I help build.",
