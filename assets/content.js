@@ -1,13 +1,14 @@
 // Editable copy and explicit mappings to the owner's named photos.
 export const profile = {
   name: "Pegah Soltani",
-  title: "Technical Product Manager",
+  title: "Product Manager · Technical Product Manager · Product Owner",
   location: "Dublin, Ireland",
+  workAuthorization: "Authorized to work in Ireland — no sponsorship required",
   greeting: "Hi, I'm Pegah! 👋",
   headline: "Technical Product Manager bridging engineering, customers, and business.",
   introduction: [
-    "I love asking questions, untangling complex problems, and working with people to turn ideas into products that make a difference.",
-    "With a background in Computer Engineering and 5+ years in product management, I bring technical thinking, creativity, and a human perspective to the products I help build.",
+    "Computer Engineering background with 5+ years of experience owning products end to end — from customer discovery and technical requirements to delivery, release, and iteration.",
+    "I’ve worked across different product environments, partnering directly with enterprise customers and translating between technical teams and business stakeholders.",
   ],
   primaryCta: { label: "Explore My Work", href: "projects/" },
   secondaryCta: { label: "Get in Touch" },

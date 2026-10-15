@@ -7,7 +7,9 @@ const hero = document.querySelector("#home-hero");
 hero.querySelector(".hero-greeting").textContent = profile.greeting;
 hero.querySelector("h1").textContent = profile.headline;
 hero.querySelector(".hero-title").textContent = profile.title;
-hero.querySelector(".hero-location").textContent = profile.location;
+const workAuthorization = document.createElement("strong");
+workAuthorization.textContent = profile.workAuthorization;
+hero.querySelector(".hero-location").replaceChildren(`${profile.location} · `, workAuthorization);
 hero.querySelector(".hero-introduction").replaceChildren(...profile.introduction.map(text => {
   const paragraph = document.createElement("p");
   paragraph.textContent = text;
