@@ -1,22 +1,22 @@
 // Source: approved recruiter-focused CV rewrite; original PDF remains unchanged.
 export const achievements = [
   {
-    "title": "15–20% higher ad engagement",
+    "title": "15–20% higher ad engagement after A/B testing",
     "supportingHeadline": "Led a first-to-market A/B testing product from discovery to public release.",
     "description": "Two enterprise customers used the winning test results to make advertising decisions and later observed 15–20% higher ad engagement."
   },
   {
-    "title": "+16 percentage points",
-    "supportingHeadline": "Improved completion of a key consumer journey from 38% to 54%.",
-    "description": "Used funnel analysis, user-behaviour insights, journey redesign, and experimentation to reduce drop-off."
+    "title": "Complaint completion improved from 38% to 54%",
+    "supportingHeadline": "",
+    "description": "Used funnel analysis, user-behaviour insights, journey redesign, and experimentation to reduce drop-off in the complaint-submission journey."
   },
   {
-    "title": "Seven-figure enterprise agreement",
-    "supportingHeadline": "Supported a strategic enterprise deal through committed product delivery.",
-    "description": "Coordinated customer requirements across Product, Engineering, Sales, and Customer Success during a high-value proof of concept."
+    "title": "Product delivery supported a seven-figure enterprise agreement",
+    "supportingHeadline": "",
+    "description": "Supported a strategic enterprise deal by coordinating committed customer requirements across Product, Engineering, Sales, and Customer Success during a high-value proof of concept."
   },
   {
-    "title": "0→1 product in real-world use",
+    "title": "0→1 preschool product released and actively used",
     "supportingHeadline": "Led KiddieDesk from user discovery through MVP release.",
     "description": "Worked with teachers, administrators, and parents, validated product flows, led phased delivery, and released an MVP that is now actively used by a school."
   }
